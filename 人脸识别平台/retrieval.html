@@ -1,0 +1,327 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+
+
+
+    <!-- 验证 -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+
+    <style>
+        .content-bg {
+            margin: 0 auto;
+            width: 800px;
+            margin-top: 90px;
+            color: #222;
+            border-radius: 5px;
+        }
+        
+        .content-bg .content {
+            min-height: 440px;
+            background-color: #fff;
+        }
+        
+        .content-bg .content h1 {
+            color: #fff;
+            text-align: center;
+            display: block;
+            background-color: #1E35D5;
+            height: 70px;
+            border-radius: 5px 5px 0px 0px;
+            line-height: 70px;
+            font-size: 24px;
+            font-weight: 300;
+        }
+        
+        .modal-body {
+            width: 420px;
+            margin: 0 auto;
+        }
+        
+        .modal-body h3 {
+            font-size: 20px;
+            line-height: 20px;
+            color: rgb(51, 51, 51);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+        
+        .content .name {
+            margin-right: 0px;
+            margin-bottom: 20px;
+            height: 40px;
+            background-color: #f3f3f3;
+        }
+        
+        .content .name:focus {
+            background-color: #fff;
+        }
+        
+        #next {
+            height: 42px;
+        }
+        
+        .header {
+            text-align: right;
+            height: 20px;
+        }
+        
+        .header span {
+            float: right;
+            font-size: 14px;
+            font-weight: 400;
+        }
+        
+        .yz {
+            width: 40%;
+            height: 40px;
+            background-color: #f3f3f3;
+        }
+        
+        .content .yz:focus {
+            background-color: #fff;
+        }
+        
+        .footer-text {
+            text-align: center;
+            font-size: 12px;
+            color: #999;
+            margin-top: 30px;
+        }
+        
+        .code {
+            font-family: Arial;
+            font-style: italic;
+            color: blue;
+            font-size: 30px;
+            border: 0;
+            padding: 2px 3px;
+            letter-spacing: 3px;
+            font-weight: bolder;
+            float: left;
+            cursor: pointer;
+            width: 150px;
+            height: 40px;
+            line-height: 40px;
+            text-align: center;
+            vertical-align: middle;
+        }
+        
+        a {
+            text-decoration: none;
+            font-size: 12px;
+            color: #1E35D5;
+        }
+        
+        a:hover {
+            text-decoration: underline;
+        }
+        
+        #nextt .yzm .form-control-feedback {
+            right: 235px;
+        }
+        
+        #yzm {
+            width: 60%;
+            float: right;
+            margin-top: -60px;
+        }
+        
+        #show .nyzm .form-control-feedback {
+            right: 235px;
+        }
+    </style>
+
+
+    <title>找回密码</title>
+</head>
+
+<body style="display: block; background: #f3f3f3  no-repeat top left fixed;" onload="createCode()">
+
+    <div class="content-bg">
+        <dvi class="header">
+
+            .<span>已有帐号，<a href="login.html" class="logo">马上登录</a></span>
+
+        </dvi>
+        <div class="content">
+            <h1>账户安全</h1>
+            <div class="modal-body">
+                <h3>找回密码</h3>
+                <form>
+                    <div id="nextt">
+                        <div class="form-group Eject">
+                            <input type="email" class="form-control name" name="text" placeholder="邮箱" id="names">
+                        </div>
+                        <div class="form-group yzm">
+                            <input type="text" class="form-control name" placeholder="验证码" style="width:40%;" id="inputCode" name="yzm" maxlength="6">
+                            <div id="yzm">
+                                <table border="0" cellspacing="5" cellpadding="5">
+                                    <tr>
+                                        <td></td>
+                                        <td>
+                                            <div class="code" id="checkCode" onclick="createCode()"></div>
+                                        </td>
+                                        <td><a href="#" onclick="createCode()">看不清换一张</a></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <button class="btn btn-lg btn-primary btn-block" style="background-color: #1E35D5;color:#fff;font-size:14px;" id="Button1" onclick="validateCode();">发送验证码</button>
+
+                    </div>
+                </form>
+                <form>
+                    <div class="Eject hieedn" id="show" style="display: none">
+                        <div class="email-cont form-group ">
+                            <input type="text" class="form-control name" name="pwd" placeholder="请输入新密码">
+                        </div>
+                        <div class="email-cont form-group ">
+                            <input type="text" class="form-control name" name="npwd" placeholder="请再次输入密码">
+                        </div>
+                        <div class="email-cont form-group nyzm">
+                            <input type="text" class="form-control name" name="nyzm" placeholder="请输入手机验证码" style="width:40%" maxlength="6">
+                        </div>
+                        <button class="btn btn-lg btn-primary btn-block" type="submit" style="background-color: #1E35D5;color:#fff;font-size:14px;">确认修改</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <p class="footer-text">© 2016 Kaytion Information Technology Co. LTD. | 粤ICP备16124020号<br> Copyright © 2016-2017 </p>
+
+
+
+
+    <script language="javascript" type="text/javascript">
+        var code;
+
+        function createCode() {
+            code = "";
+            var codeLength = 6; //验证码的长度
+            var checkCode = document.getElementById("checkCode");
+            var codeChars = new Array(0, 1, 2, 3, 4, 5, 6, 7, 8, 9,
+                'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+                'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'); //所有候选组成验证码的字符，当然也可以用中文的
+            for (var i = 0; i < codeLength; i++) {
+                var charNum = Math.floor(Math.random() * 52);
+                code += codeChars[charNum];
+            }
+            if (checkCode) {
+                checkCode.className = "code";
+                checkCode.innerHTML = code;
+            }
+        }
+        $(function() {
+            $('form').bootstrapValidator({
+                message: 'This value is not valid',
+                feedbackIcons: {
+                    valid: 'glyphicon glyphicon-ok',
+                    invalid: 'glyphicon glyphicon-remove',
+                    validating: 'glyphicon glyphicon-refresh'
+                },
+                fields: {
+                    text: {
+                        message: '请输入正确邮箱',
+                        validators: {
+                            notEmpty: {
+                                message: '*邮箱不能为空'
+                            },
+                        }
+                    },
+                    yzm: {
+                        message: '验证失败',
+                        validators: {
+                            notEmpty: {
+                                message: '*验证码不能为空'
+                            },
+                            stringLength: {
+                                min: 6,
+                                max: 6,
+                                message: '验证码长度必须6位以'
+                            },
+                        }
+                    },
+                    pwd: {
+                        message: '验证失败',
+                        validators: {
+                            notEmpty: {
+                                message: '*密码不能为空'
+                            },
+                            stringLength: {
+                                min: 6,
+                                max: 20,
+                                message: '*密码长度必须6位到20位之间'
+                            },
+
+
+                        }
+                    },
+                    pwd: {
+                        validators: {
+                            notEmpty: {
+                                message: '*新密码不能为空'
+                            }
+                        }
+                    },
+                    npwd: {
+                        validators: {
+                            notEmpty: {
+                                message: '*确认密码不能为空'
+                            },
+                            identical: {
+                                field: 'pwd',
+                                message: '*两次输入密码不一致'
+                            }
+                        }
+                    },
+
+
+
+                }
+
+            });
+
+        });
+
+
+        function validateCode() {
+
+            var inputCode = document.getElementById("inputCode").value;
+
+            if (inputCode.length <= 0) {
+                alert("请输入验证码！");
+            } else if (inputCode.toUpperCase() != code.toUpperCase()) {
+                alert("验证码输入有误！");
+                createCode();
+            } else {
+                alert("验证码正确！");
+                $("#nextt").bind("click", function(event) {
+                    $("#show").show()
+                });
+                $("#nextt").bind("click", function(event) {
+                    $("#nextt").hide()
+                });
+
+            }
+        }
+    </script>
+
+
+
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrapValidator.min.js"></script>
+
+
+</body>
+
+</html>
