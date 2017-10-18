@@ -1,0 +1,1228 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html style=" background: #1d32c6 no-repeat top left fixed;">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="css/index.css">
+
+
+    <!-- 验证 -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box
+        }
+        
+        #html {
+            -webkit-background-size: cover;
+            -mox-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover
+        }
+        
+        body {
+            margin: 0;
+            padding: 0;
+            z-index: -999;
+            text-align: left
+        }
+        
+        table {
+            border-spacing: 0;
+            border-collapse: collapse
+        }
+        
+        td,
+        th {
+            padding: 0
+        }
+        
+        html,
+        body,
+        .login_panel {
+            height: 100%
+        }
+        
+        #login_workload_logo_image {
+            max-width: 300px;
+            max-height: 60px
+        }
+        
+        a {
+            text-decoration: none;
+            color: #2872dd;
+            background-color: transparent
+        }
+        
+        img {
+            border: 0
+        }
+        
+        .infotext {
+            color: #333
+        }
+        
+        input:focus,
+        select:focus,
+        textarea:focus {
+            outline: none
+        }
+        
+        .login_panel {
+            background: #fff;
+            position: fixed;
+            right: 0;
+            float: right;
+            height: 100%;
+            width: 500px;
+            margin: 0;
+            padding: 0;
+            z-index: 1;
+            overflow-y: auto;
+            overflow-x: hidden;
+            text-align: center
+        }
+        
+        .login_panel_layout {
+            margin: 0 auto;
+            text-align: left
+        }
+        
+        .login_inner_container {
+            min-height: 100%;
+            width: 100%;
+            margin-bottom: -50px
+        }
+        
+        .push {
+            content: "";
+            display: block
+        }
+        
+        .login_footer_container,
+        .push {
+            height: 50px
+        }
+        
+        .sticky_footer {
+            margin-top: -3.5em
+        }
+        
+        .inner_container {
+            padding-left: 0;
+            width: 100%;
+            display: inline-block;
+            position: relative;
+            height: 100%
+        }
+        
+        .cred {
+            height: 100%
+        }
+        
+        .login_workload_logo_container {
+            width: auto;
+            height: auto;
+            -moz-transition: margin .6s;
+            -webkit-transition: margin .6s;
+            -o-transition: margin .6s;
+            transition: margin .6s;
+            transition-property: margin;
+            transition-duration: .6s
+        }
+        
+        .spacer {
+            padding-top: 100px;
+            transition: padding .6s
+        }
+        
+        .cta_text {
+            width: 100%
+        }
+        
+        .login_cred_container {
+            width: 100%;
+            height: auto;
+            padding-bottom: 60px;
+            transition: margin .6s;
+            -moz-transition: margin .6s;
+            -webkit-transition: margin .6s;
+            -o-transition: margin .6s;
+            transition-property: margin;
+            transition-duration: .6s;
+            margin-bottom: 0
+        }
+        
+        .login_cred_container.no_spacer {
+            margin-top: -90px
+        }
+        
+        .login_cred_field_container {
+            width: 380px;
+            display: list-item
+        }
+        
+        .login_user_chooser {
+            width: 100%
+        }
+        
+        .login_cred_options_container {
+            width: 380px;
+            margin: 0;
+            padding: 0;
+            display: list-item
+        }
+        
+        .high_contrast_border {
+            border: 1px solid #fff;
+            width: auto;
+            max-width: 350px
+        }
+        
+        input.login_textfield {
+            height: 28px;
+            padding-left: 3px;
+            margin: 0;
+            border: 1px solid #b8b8b8;
+            z-index: 3;
+            background: transparent;
+            color: #000
+        }
+        
+         ::-webkit-input-placeholder {
+            color: #767676
+        }
+        
+         :-moz-placeholder {
+            color: #767676
+        }
+        
+         ::-moz-placeholder {
+            color: #767676
+        }
+        
+         :-ms-input-placeholder {
+            color: #767676
+        }
+        
+        span.placeholder {
+            color: #767676;
+            margin: 6px 0 0 -6px;
+            padding-left: 10px;
+            width: 380px;
+            z-index: -1
+        }
+        
+        .field {
+            color: #6b6b6b
+        }
+        
+        .button {
+            background: #2672ec;
+            border: 1px solid #fff;
+            padding: 6px 12px 6px 12px;
+            color: #fff;
+            width: auto;
+            cursor: pointer;
+            margin-right: 4px;
+            transition: background 1s;
+            -moz-transition: background 1s;
+            -webkit-transition: background 1s;
+            -o-transition: background 1s;
+            transition-property: background;
+            transition-duration: 1s;
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -khtml-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -o-user-select: none;
+            user-select: none;
+            display: inline-block
+        }
+        
+        .button:active {
+            background: #212121;
+            color: #fff
+        }
+        
+        .button:focus {
+            outline: gold solid 1px
+        }
+        
+        .button.wide_button {
+            width: 100%;
+            text-align: center
+        }
+        
+        .cred_cancel_button {
+            background: #cbcbcb;
+            color: #000
+        }
+        
+        .cred_cancel_button:active {
+            background: #0072c6;
+            color: #000
+        }
+        
+        .status {
+            margin-top: 10px;
+            margin-bottom: 20px
+        }
+        
+        .strong_subtext {
+            margin-bottom: 10px
+        }
+        
+        .disabled_changepassword_button {
+            background: #d4e3fb
+        }
+        
+        input.login_textfield:focus {
+            border: 1px solid #6b6b6b
+        }
+        
+        .progress {
+            position: relative;
+            top: -6px;
+            height: 6px;
+            visibility: hidden;
+            margin-left: 0
+        }
+        
+        span.input_field {
+            background: transparent;
+            z-index: 0
+        }
+        
+        input:focus {
+            border: 1px solid #000;
+            background: #fff
+        }
+        
+        .disabled {
+            background: transparent
+        }
+        
+        input#cred_keep_me_signed_in_checkbox {
+            padding-right: 0;
+            border-color: #5b5b5b
+        }
+        
+        input#cred_keep_me_signed_in_checkbox:focus {
+            outline: gold solid 1px
+        }
+        
+        #cred_kmsi_container {
+            margin-bottom: 30px
+        }
+        
+        input#cred_remember_mfa_checkbox {
+            padding-right: 0;
+            border-color: #5b5b5b
+        }
+        
+        input#cred_remember_mfa_checkbox:focus {
+            outline: gold solid 1px
+        }
+        
+        #cred_remember_mfa_container {
+            margin-bottom: 30px
+        }
+        
+        .cred_sign_in_button_push {
+            margin-top: 30px
+        }
+        
+        #recover_container {
+            margin-top: 30px;
+            margin-bottom: 10px
+        }
+        
+        #setuplocal_container {
+            margin-top: 30px;
+            margin-bottom: 10px
+        }
+        
+        #create_msa_account_container {
+            margin-top: 30px;
+            margin-bottom: 10px
+        }
+        
+        span.info_text {
+            margin-left: 4px
+        }
+        
+        span#cred_forgot_password_link {
+            cursor: pointer;
+            margin-left: 0
+        }
+        
+        #local_account_setup_link {
+            cursor: pointer;
+            margin-left: 0
+        }
+        
+        #redirect_cta_text {
+            margin-bottom: 10px
+        }
+        
+        #redirect_message_container {
+            transition: opacity 1s;
+            -moz-transition: opacity 1s;
+            -webkit-transition: opacity 1s;
+            -o-transition: opacity 1s;
+            transition-property: opacity;
+            transition-duration: 1s;
+            opacity: 0;
+            visibility: hidden
+        }
+        
+        a.inactive_link {
+            margin-right: 30px
+        }
+        
+        .footer {
+            width: 100%;
+            height: 40px;
+            color: #666;
+            margin-left: 0;
+            display: inline-block
+        }
+        
+        .branding_footer {
+            padding-right: 10px
+        }
+        
+        .corp_link {
+            padding-right: 5px;
+            cursor: pointer;
+            display: inline-block
+        }
+        
+        .corp_link:first-child {
+            padding-left: 0;
+            padding-right: 0
+        }
+        
+        #login_panel_center {
+            width: 400px;
+            height: 100%;
+            min-height: 100%;
+            margin: 0;
+            display: inline-block;
+            padding: 0;
+            border: 0
+        }
+        
+        img#background_background_image {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+        }
+        
+        #footer_table {
+            max-width: 350px
+        }
+        
+        .corporate_footer {
+            float: left
+        }
+        
+        .footer_glyph_container {
+            display: inline-block;
+            padding: 0
+        }
+        
+        .footer_glyph {
+            width: 37px;
+            height: 30px;
+            padding: 0;
+            padding-right: 7px
+        }
+        
+        span.branding_footer {
+            padding-right: 0
+        }
+        
+        .ad_glyph {
+            width: 50px;
+            height: 50px;
+            margin-bottom: -1px;
+            margin-top: 4px
+        }
+        
+        a.tile_link {
+            outline: none;
+            width: 100%;
+            color: #000
+        }
+        
+        a.tile_link .bigtext {
+            color: #000
+        }
+        
+        a.tile_link:focus table.user_tile {
+            background: #0072c6;
+            outline: none;
+            color: #fff
+        }
+        
+        a.tile_link:focus .bigtext {
+            color: #fff
+        }
+        
+        a.tile_link:hover {
+            background: #fff;
+            text-decoration: none
+        }
+        
+        a.tile_link:hover .bigtext {
+            color: #000
+        }
+        
+        table.user_tile {
+            border-spacing: 10px;
+            border-collapse: separate;
+            width: 100%;
+            max-width: 350px
+        }
+        
+        table.user_tile:hover {
+            background: #e6e6e6
+        }
+        
+        table.user_tile:active {
+            background: #0072c6;
+            color: #fff
+        }
+        
+        a.tooltip span {
+            display: none;
+            padding: 6px 6px;
+            margin-left: 8px;
+            text-align: center;
+            width: auto
+        }
+        
+        a.tooltip:hover span {
+            display: inline;
+            position: absolute;
+            background: #fff;
+            border: 1px solid #373737;
+            color: #373737
+        }
+        
+        .tile_name {
+            width: 100%;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            max-width: 100px
+        }
+        
+        .tile_name_padding {
+            padding: 0 10px 0 10px
+        }
+        
+        .tile_primary_name {
+            margin-left: 10px;
+            margin-right: 10px;
+            vertical-align: top;
+            padding: 0;
+            margin-top: -4px
+        }
+        
+        .tile_secondary_name {
+            margin-left: 10px;
+            margin-right: 10px;
+            vertical-align: top
+        }
+        
+        #back_button {
+            float: left;
+            margin-left: -34px;
+            margin-top: 10px
+        }
+        
+        .hip_link {
+            padding-left: 5px;
+            padding-right: 5px
+        }
+        
+        .hip_link:first-child {
+            padding-left: 0;
+            padding-right: 5px
+        }
+        
+        .hip_link a {
+            color: #0073c6
+        }
+        
+        #hip_image_container {
+            margin-top: 10px
+        }
+        
+        .tfa_options {
+            margin-top: 20px
+        }
+        
+        .ca {
+            word-wrap: break-word;
+            margin-bottom: 25px
+        }
+        
+        .ca_title {
+            font: 1.4em normal, "Segoe UI Light", "Segoe UI", Segoe, Tahoma, Helvetica, Arial, sans-serif
+        }
+        
+        .footer_glyph {
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            margin-right: 0
+        }
+        
+        .footer_block {
+            width: 350px;
+            color: #767676;
+            font-family: "Segoe UI Webfont", "Helvetica Neue", "Lucida Grande", "Roboto", "Ebrima", "Nirmala UI", "Gadugi", "Segoe Xbox Symbol", "Segoe UI Symbol", "Meiryo UI", "Khmer UI", "Tunga", "Lao UI", "Raavi", "Iskoola Pota", "Latha", "Leelawadee", "Microsoft YaHei UI", "Microsoft JhengHei UI", "Malgun Gothic", "Estrangelo Edessa", "Microsoft Himalaya", "Microsoft New Tai Lue", "Microsoft PhagsPa", "Microsoft Tai Le", "Microsoft Yi Baiti", "Mongolian Baiti", "MV Boli", "Myanmar Text", "Cambria Math"
+        }
+        
+        .footer_link {
+            margin-right: 12px
+        }
+        
+        .table {
+            width: 100%
+        }
+        
+        .table .table-cell {
+            display: table-cell;
+            vertical-align: middle
+        }
+        
+        .optin-banner {
+            margin: 20px 0;
+            color: #262626;
+            background-color: #f2f2f2;
+            padding: 24px;
+            font-size: 13px;
+            z-index: 100;
+            -webkit-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.55);
+            -moz-box-shadow: 0 2px 3px rgba(0, 0, 0, 0.55);
+            box-shadow: 0 2px 3px rgba(0, 0, 0, 0.55)
+        }
+        
+        .optin-banner .table-cell:first-child {
+            width: 100%
+        }
+        
+        @media only screen and (max-height:820px),
+        (max-device-height:820px) {
+            .spacer {
+                padding-top: 30px
+            }
+            .login_cred_container {
+                padding-bottom: 20px;
+                margin-bottom: 0
+            }
+            .login_cred_container.no_spacer {
+                margin-top: -10px
+            }
+        }
+        
+        @media only screen and (max-height:600px),
+        (max-device-height:600px) {
+            .spacer {
+                padding-top: 10px
+            }
+            .login_cred_container {
+                padding-bottom: 20px;
+                margin-bottom: 0
+            }
+            .login_cred_container.no_spacer {
+                margin-top: 0
+            }
+        }
+        
+        @media only screen and (max-height:575px),
+        (max-device-height:575px) {
+            .spacer {
+                padding-top: 0
+            }
+            .login_cred_container {
+                padding-bottom: 20px;
+                margin-bottom: 0
+            }
+            .login_guest_container {
+                padding-top: 10px;
+                padding-bottom: 30px
+            }
+            .login_guest_container.no_spacer {
+                margin-top: 0
+            }
+        }
+        
+        @media only screen and (max-width:600px),
+        (max-device-width:600px) {
+            html {
+                background: #fff;
+                overflow: hidden
+            }
+            body {
+                background: #fff
+            }
+            #back_button_container {
+                margin-left: -30px
+            }
+            .sticky_footer {
+                margin-top: -4em
+            }
+            .login_panel {
+                float: none;
+                height: 100%;
+                width: 100%;
+                min-width: 100%;
+                margin: 0;
+                padding: 0;
+                z-index: 1;
+                padding-top: 0;
+                overflow: auto
+            }
+            #login_panel {
+                border-left: 0
+            }
+            #login_panel_center {
+                width: 400px
+            }
+        }
+        
+        @media only screen and (max-width:420px),
+        (max-device-width:420px) {
+            .inner_container {
+                padding-top: 45px
+            }
+            .tinytext {
+                font-size: .6em
+            }
+            .smalltext {
+                font-size: .7em
+            }
+            .normaltext {
+                font-size: .8em
+            }
+            .bigtext {
+                font-size: 1em
+            }
+            .gianttext {
+                font-size: 1.2em
+            }
+            div#background_branding_container {
+                opacity: 0;
+                z-index: -999;
+                display: none
+            }
+            div#background_page_overlay {
+                display: none;
+                z-index: -999
+            }
+            .login_panel {
+                float: none;
+                height: 100%;
+                width: 100%;
+                min-width: 100%;
+                margin: 0;
+                padding: 0;
+                z-index: 1;
+                padding-top: 0;
+                overflow: auto
+            }
+            #login_panel_center {
+                padding-left: 10px;
+                padding-right: 10px;
+                width: 100%
+            }
+            img.workload_img {
+                max-width: 280px;
+                width: auto
+            }
+            .login_workload_logo_container {
+                margin-bottom: 0;
+                max-width: 280px;
+                padding-left: 0
+            }
+            .login_cta_container {
+                margin-bottom: 0;
+                max-width: 280px;
+                padding-left: 0;
+                width: auto;
+                height: auto;
+                color: #333
+            }
+            .login_error_container {
+                margin-top: 4px;
+                margin-bottom: 4px;
+                padding: 0;
+                height: 20px
+            }
+            .login_cred_field_container {
+                max-width: 280px
+            }
+            .login_cred_options_container {
+                max-width: 280px;
+                padding-left: 0
+            }
+            .cta_text {
+                display: inline
+            }
+            .login_cred_container {
+                padding-bottom: 20px
+            }
+            .login_guest_container {
+                max-width: 280px;
+                padding-right: 5px
+            }
+            span.placeholder {
+                width: 280px;
+                padding-left: 10px
+            }
+            div.login_textfield {
+                max-width: 100%
+            }
+            input.login_textfield {
+                max-width: 100%
+            }
+            div#cred_password_container {
+                transition: none;
+                -moz-transition: none;
+                -webkit-transition: none;
+                -o-transition: none;
+                transition-property: none;
+                transition-duration: 0
+            }
+            #redirect_messsage_container {
+                transition: opacity 1s;
+                -moz-transition: opacity 1s;
+                -webkit-transition: opacity 1s;
+                -o-transition: opacity 1s;
+                transition-property: opacity;
+                transition-duration: 1s
+            }
+            .subtext {
+                transition: none;
+                -moz-transition-property: none;
+                -moz-transition-duration: 0;
+                -webkit-transition-property: none;
+                -webkit-transition-duration: 0;
+                -o-transition: none;
+                -o-transition-duration: 0;
+                transition-property: none;
+                transition-duration: 0
+            }
+            .login_guest_container {
+                width: 100%
+            }
+            .footer {
+                width: 100%;
+                max-width: 380px;
+                margin: auto;
+                display: inline-block
+            }
+            .corp_link:first-child {
+                padding: 0
+            }
+            table.user_tile {
+                max-width: 320px
+            }
+            .optin-banner {
+                position: fixed;
+                width: 100%;
+                top: auto;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                margin: 0;
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+                box-shadow: none
+            }
+        }
+        
+        @media only screen and (max-width:280px),
+        (max-device-width:280px) {
+            #login_panel_center {
+                width: 210px;
+                width: calc(70%)
+            }
+            table.user_tile {
+                max-width: 100%
+            }
+            #redirect_cta_text {
+                width: 100%;
+                max-width: 100%
+            }
+            #redirect_message_container {
+                width: 100%;
+                max-width: 100%
+            }
+            .login_panel {
+                width: 100%;
+                min-width: 100%
+            }
+            img.workload_img {
+                max-width: 100%;
+                height: 30px;
+                width: auto
+            }
+            .login_workload_logo_container {
+                max-width: 100%
+            }
+            .login_cta_container {
+                max-width: 100%
+            }
+            .login_cred_field_container {
+                width: 100%
+            }
+            .login_cred_options_container {
+                width: 100%;
+                max-width: 100%
+            }
+            .login_guest_container {
+                width: 100%
+            }
+            span.placeholder {
+                width: 100%
+            }
+            div.login_textfield {
+                width: 100%
+            }
+            input.login_textfield {
+                width: 100%
+            }
+        }
+        
+        .slide {
+            -webkit-animation-duration: .5s;
+            -webkit-animation-fill-mode: both;
+            -moz-animation-duration: .5s;
+            -moz-animation-fill-mode: both;
+            -ms-animation-duration: .5s;
+            -ms-animation-fill-mode: both;
+            animation-duration: .5s;
+            animation-fill-mode: both;
+            -webkit-animation-name: commonFadeInFrames, slideLTransformFrames;
+            -moz-animation-name: commonFadeInFrames, slideLTransformFrames;
+            -ms-animation-name: commonFadeInFrames, slideLTransformFrames;
+            animation-name: commonFadeInFrames, slideLTransformFrames
+        }
+        
+        @media only screen and (max-width:620px),
+        (max-device-width:620px) {
+            .tile_name {
+                -o-text-overflow: ellipsis;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap;
+                max-width: 100px
+            }
+            .login_cred_container {
+                margin-bottom: 0
+            }
+        }
+        
+        @media only screen and (max-width:250px),
+        (max-device-width:250px) {
+            .tile_name {
+                -o-text-overflow: ellipsis;
+                text-overflow: ellipsis;
+                overflow: hidden;
+                white-space: nowrap
+            }
+        }
+        
+        @media only screen and (max-width: 420px),
+        (max-device-width: 420px) {
+            .inner_container {
+                padding-top: 45px;
+            }
+        }
+        
+        @media only screen and (max-width: 420px),
+        (max-device-width: 420px) {
+            #login_panel_center {
+                padding-left: 10px;
+                padding-right: 10px;
+                width: 100%;
+                padding-top: 50px;
+            }
+        }
+        
+        @media only screen and (max-width: 420px),
+        (max-device-width: 420px) {
+            .login_panel_layout {
+                width: 80%;
+            }
+        }
+    </style>
+    <style>
+        .no_display {
+            display: none;
+        }
+        
+        .no_border {
+            outline: none;
+        }
+        
+        .glyph {
+            font-family: "Segoe MDL2 Assets";
+            vertical-align: middle;
+        }
+    </style>
+
+
+    <style>
+        body {
+            display: none;
+        }
+        
+        #username {
+            margin-bottom: 15px;
+            border-radius: 0px;
+        }
+        
+        #password {
+            border-radius: 0px;
+            margin-bottom: 12px;
+        }
+        
+        .input-group {
+            width: 100%;
+        }
+        
+        .form-control {
+            height: 40px;
+        }
+        
+        @media only screen and (max-width: 420px),
+        (max-device-width: 420px) {
+            .form-control {
+                height: 80px;
+                font-size: 1.5em;
+            }
+        }
+        
+        @media only screen and (max-width: 420px),
+        (max-device-width: 420px) {
+            .spass {
+                font-size: 1.4em;
+            }
+        }
+        
+        .btn-primary {
+            float: left;
+            height: 40px;
+            padding: 8px 16px;
+            width: 100%;
+            background-color: #1E35D5;
+            border-radius: 0px;
+            font-size: 16px;
+            margin-top: 38px;
+        }
+        
+        @media only screen and (max-width: 420px),
+        (max-device-width: 420px) {
+            .btn-primary {
+                height: 70px;
+                font-size: 1.5em;
+            }
+        }
+        
+        .btn-primary:hover {
+            background-color: #1d32c6;
+        }
+        
+        #logo_text {
+            color: #333;
+            font-size: 1.8em;
+            font-family: 'Segoe UI Light', 'Segoe', 'Segoe UI', 'SegoeUI-Light-final', Tahoma, Helvetica, Arial, sans-serif;
+            font-weight: lighter;
+        }
+        
+        @media only screen and (max-width: 420px),
+        (max-device-width: 420px) {
+            #logo_text {
+                font-size: 3.8em;
+            }
+        }
+        
+        .btn-primary.active,
+        .btn-primary:active,
+        .open>.dropdown-toggle.btn-primary {
+            background-color: #1d32c6;
+        }
+        
+        .btn-primary.focus,
+        .btn-primary:focus {
+            background-color: #1d32c6;
+        }
+        
+        .btn-primary.active.focus,
+        .btn-primary.active:focus,
+        .btn-primary.active:hover,
+        .btn-primary:active.focus,
+        .btn-primary:active:focus,
+        .btn-primary:active:hover,
+        .open>.dropdown-toggle.btn-primary.focus,
+        .open>.dropdown-toggle.btn-primary:focus,
+        .open>.dropdown-toggle.btn-primary:hover {
+            background-color: #1d32c6;
+        }
+        
+        .modal-body {
+            padding: 0
+        }
+    </style>
+
+    <title>登录</title>
+</head>
+
+<body style="display: block; background: #1E35D5  no-repeat top left fixed;">
+    <div id="background_branding_container">
+        <img id="background_background_image" src="https://static.pexels.com/photos/558375/pexels-photo-558375.jpeg" style="width:1570px;  height: 100;visibility: visible; display: block;">
+    </div>
+    <div id="login_panel" class="login_panel" style="display: block;">
+
+        <table class="login_panel_layout" style="height: 100%;">
+            <tbody>
+                <tr class="login_panel_layout_row" style="height: 100%;">
+                    <td id="login_panel_center">
+
+                        <div class="login_inner_container" role="main">
+                            <div id="true_inner" class="inner_container cred">
+                                <div id="optInUserBanner" class="optin-banner normaltext table vis-hidden" aria-hidden="true" style="visibility: hidden;">
+                                    <div class="table-row">
+                                        <div class="push"></div>
+                                        <div class="push" style="margin-bottom:15px;"></div>
+
+
+                                    </div>
+                                </div>
+                                <div class="login_workload_logo_container">
+                                    <h1 id="logo_text">登 录</h1>
+                                </div>
+                                <div class="push"></div>
+                            </div>
+                            <dvi id="container_login" role="document">
+                                <div class="modal-body">
+                                    <form>
+                                        <div class="form-group">
+
+                                            <input type="email" class="form-control" placeholder="邮箱" name="username" id="username" required></input>
+                                        </div>
+
+                                        <div class="form-group">
+                                            <input type="password" class="form-control" placeholder="密码" id="password" name="password" required></input>
+                                        </div>
+
+                                        <span class="spass"> 
+                                        <a href="retrieval.html">
+                                            忘记密码
+                                        </a>
+                                 </span>
+                                        <div class="input-group">
+                                            <button class="btn  btn-primary btn-block" type="submit" name="submit" id="logins" data-loading-text="Loading...">登录</button>
+                                        </div>
+                                    </form>
+
+                                </div>
+                            </dvi>
+
+                        </div>
+
+
+                        <div id="footer_links_container" class="login_footer_container" role="contentinfo">
+                            <div class="footer_glyph">
+                                <img src="img/log-logo.png" alt="LOGO" width="100">
+                            </div>
+
+                        </div>
+
+
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+    </div>
+    <!-- 验证表单-->
+    <script>
+        $(function() {
+            $('form').bootstrapValidator({
+                message: 'This value is not valid',
+                feedbackIcons: {
+                    valid: 'glyphicon glyphicon-ok',
+                    invalid: 'glyphicon glyphicon-remove',
+                    validating: 'glyphicon glyphicon-refresh'
+                },
+                fields: {
+                    username: {
+                        message: '请输入正确的邮箱',
+                        validators: {
+                            notEmpty: {
+                                message: '邮箱不能为空'
+                            },
+
+
+
+                        }
+                    },
+
+                    password: {
+                        message: '密码不正确',
+                        validators: {
+                            notEmpty: {
+                                message: '密码不能为空'
+                            },
+                            stringLength: {
+                                min: 6,
+                                max: 18,
+                                message: '请输入6位及以上密码'
+                            },
+
+                        }
+                    },
+
+                }
+
+            });
+
+        });
+    </script>
+
+    <script>
+        $('#logins').on('click', function() {
+            var $btn = $(this).button('loading')
+                // business logic...
+            $btn.button('reset')
+        })
+    </script>
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <script src="js/bootstrapValidator.min.js"></script>
+
+
+</body>
+
+</html>

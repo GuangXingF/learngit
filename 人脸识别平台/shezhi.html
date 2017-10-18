@@ -1,0 +1,1205 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mosaddek">
+
+    <title>设置</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/table.css" rel="stylesheet" />
+
+
+
+    <link rel="stylesheet" href="css/index.css">
+
+
+    <!-- 侧栏css-->
+    <link href="css/style.css" rel="stylesheet">
+    <!-- 当页css-->
+    <link href="css/style-sz.css" rel="stylesheet">
+
+
+</head>
+
+
+<body>
+
+    <section id="container">
+
+
+        <ul id="myTab" class="nav nav-tabs">
+            <li class="active"><a href="#one" data-toggle="tab">个人信息</a></li>
+            <li><a href="#son" data-toggle="tab">子账号管理</a></li>
+            <li><a href="#security" data-toggle="tab">修改密码</a></li>
+            <li><a href="#system" data-toggle="tab">系统设置</a></li>
+            <li><a href="#pzhi" data-toggle="tab">设备配置</a></li>
+            <!--
+            <li class="dropdown">
+                <a href="#" id="myTabDrop1" class="dropdown-toggle" data-toggle="dropdown">Java 
+			<b class="caret"></b>
+		</a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="myTabDrop1">
+                    <li><a href="#jmeter" tabindex="-1" data-toggle="tab">jmeter</a></li>
+                    <li><a href="#ejb" tabindex="-1" data-toggle="tab">ejb</a></li>
+                </ul>
+            </li>
+            -->
+        </ul>
+        <div id="myTabContent" class="tab-content">
+            <div class="tab-pane fade in active" id="one">
+
+
+
+                <div class="form-group" style="height:80px">
+
+                    <label for="username" style="  margin-top: 20px;">头像：</label>
+                    <div class="con4">
+                        <a data-toggle="modal" data-target=".bs-example-modal-sm">
+
+                            <canvas id="cvss" width="50" height="50" style="background:url(http://ppe.oss-cn-shenzhen.aliyuncs.com/collections/67/1/thumb.jpg);background-repeat:no-repeat;background-size:100% 100%;" class="cvss"></canvas>
+                        </a>
+                        <span class="btn upload" style="        line-height: 80px;">
+                                    <input type="file" class="upload_pic" id="upload_l" />点击上传头像
+                                </span>
+                    </div>
+                </div>
+                <div class="form-group has-feedback">
+                    <label for="username" class="title">登录名：</label>
+                    <p class="text-content">广州康行信息技术有限公司</p>
+                    <span><a href="#"  data-target="#xiugai" data-toggle="modal">修改登录名</a></span>
+                </div>
+
+                <div class="form-group has-feedback">
+                    <label for="username" class="title">邮 箱：</label>
+
+                    <p class="text-content">kaytion@kaytion.com</p>
+                    <span><a href="#"  data-target="#email" data-toggle="modal">更换邮箱</a></span>
+
+
+                </div>
+                <div class="form-group has-feedback">
+                    <label for="username" class="title">手机号：</label>
+                    <p>138-8888-8888</p>
+                    <span><a href="#" data-target="#phone" data-toggle="modal">更换手机号</a></span>
+                </div>
+                <div class="form-group has-feedback">
+                    <label for="username" class="title">公司名称：</label>
+                    <p>广州康行信息技术有限公司</p>
+                    <span><a href="#" data-target="#gsming" data-toggle="modal">修改公司名</a></span>
+
+                </div>
+            </div>
+            <div class="tab-pane fade" id="son">
+                <button type="button" class="btn btn-primary btn-lg newbut" data-toggle="modal" data-target="#gridSystemModal"> 添加子账号</button>
+                <ul>
+                    <li>
+                        <div class="son-title">
+                            <h3>张三</h3>
+                            <p>采购处<a href="#" data-toggle="modal" data-target="#bianji">修改信息</a></p>
+
+                        </div>
+                        <div class="son-cont">
+                            <p>登录名：<span>zhangshan@kaytion.com</span></p>
+                            <p>登录密码：<span>kaytion.com</span></p>
+                            <a href="#" data-target="#del" data-toggle="modal">删除账号</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="son-title">
+                            <h3>张三</h3>
+                            <p>采购处<a href="#" data-toggle="modal" data-target="#bianji">修改信息</a></p>
+
+                        </div>
+                        <div class="son-cont">
+                            <p>登录名：<span>zhangshan@kaytion.com</span></p>
+                            <p>登录密码：<span>kaytion.com</span></p>
+                            <a href="#" data-target="#del" data-toggle="modal">删除账号</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="son-title">
+                            <h3>张三</h3>
+                            <p>采购处<a href="#" data-toggle="modal" data-target="#bianji">修改信息</a></p>
+
+                        </div>
+                        <div class="son-cont">
+                            <p>登录名：<span>zhangshan@kaytion.com</span></p>
+                            <p>登录密码：<span>kaytion.com</span></p>
+                            <a href="#" data-target="#del" data-toggle="modal">删除账号</a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="son-title">
+                            <h3>张三</h3>
+                            <p>采购处<a href="#" data-toggle="modal" data-target="#bianji">修改信息</a></p>
+
+                        </div>
+                        <div class="son-cont">
+                            <p>登录名：<span>zhangshan@kaytion.com</span></p>
+                            <p>登录密码：<span>kaytion.com</span></p>
+                            <a href="#" data-target="#del" data-toggle="modal">删除账号</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="tab-pane fade" id="security">
+                <!-- 修改密码 -->
+
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label>原密码：</label>
+                            <input type="Password" class="form-control" placeholder="原密码" name="olpwd" required placeholder="请输入原密码"></input>
+                        </div>
+
+
+                        <div class="form-group">
+                            <label>新密码：</label>
+                            <input type="Password" class="form-control" id="neme" placeholder="请输入新密码" name="newPwd" required> </input>
+                        </div>
+                        <div class="form-group">
+                            <label>再输一次新密码：</label>
+                            <input type="Password" class="form-control" name="checkPwd" placeholder="请再次输入新密码" required/>
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-lg btn-block" type="submit" style="background-color: #1E35D5;color:#fff;font-size:14px;">确认修改</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div class="tab-pane fade" id="system">
+                <button type="text" class="btn  newbut" style="float:right;" onclick="func()">保存设置</button>
+
+                <section class="settings-item-wrapper">
+                    <h2>显示设置</h2>
+
+                    <p class="settings-item-intro">设置显示屏画面的出现时间</p>
+
+                    <div data-type="inboxmsg" class="settings-item settings-item-solidline clearfix">
+                        <h3 class="zg-left settings-item-left">迎宾显示时间</h3>
+                        <div class="zg-left settings-item-right">
+                            <div class="row settings-receive">
+                                <label>
+                        <input type="radio" name="inboxmsg-receive" value="all" checked />
+                        5s显示时间
+                        </label>
+                                <label>
+                        <input type="radio" name="inboxmsg-receive" value="follow" />
+                        10s显示时间
+                        </label>
+                            </div>
+
+
+                        </div>
+                    </div>
+                    <div data-type="xubxu" class="settings-item settings-item-solidline clearfix">
+                        <h3 class="zg-left settings-item-left">信息显示</h3>
+                        <div class="zg-left settings-item-right">
+                            <div class="row settings-receive">
+                                <label>
+                            <input type="checkbox" checked/>
+                            公司
+                            </label>
+                                <label>
+                                    <input type="checkbox" checked/>
+                                    时间
+                                    </label>
+                                <label>
+                                            <input type="checkbox" />
+                                            实时视频流
+                                            </label>
+                                <label>
+                                                    <input type="checkbox"  />
+                                                    自定义语句
+                                                    </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-type="answer_voteup" class="settings-item settings-item-solidline clearfix">
+                        <h3 class="zg-left settings-item-left">级别显示</h3>
+                        <div class="zg-left settings-item-right">
+                            <div class="row settings-receive">
+
+                                <label>
+                            <input type="radio" name="answer-voteup-receive" value="all" checked />
+                            优先显示高级别
+                            </label>
+                                <label>
+                            <input type="radio" name="answer-voteup-receive" value="follow" />
+                            同级别一起显示
+                            </label>
+
+                                <label>
+                            <input type="radio" name="answer-voteup-receive" value="no" />
+                            只显示一人
+                            </label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="settings-item-wrapper">
+                    <h2>播报设置</h2>
+                    <p class="settings-item-intro">设置播报声音大小和音量</p>
+                    <div data-type="question_invite" class="settings-item settings-item-solidline clearfix">
+                        <h3 class="zg-left settings-item-left">声音风格</h3>
+                        <div class="zg-left settings-item-right">
+                            <div class="row settings-receive">
+                                <label>
+                        <input type="radio" name="question-invite-receive" value="all"  />
+                        男声
+                        </label>
+                                <label>
+                        <input type="radio" name="question-invite-receive" value="follow" checked/>
+                        女声
+                        </label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div data-type="question_answered" class="settings-item settings-item-solidline clearfix">
+                        <h3 class="zg-left settings-item-left">音量开关</h3>
+                        <div class="zg-left settings-item-right">
+                            <div class="row settings-receive">
+                                <label>
+                        <input type="radio" name="question-answered-receive" value="all" checked/>
+                        开
+                        </label>
+                                <label>
+                        <input type="radio" name="question-answered-receive" value="all"  />
+                        关
+                        </label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div data-type="column_update" class="settings-item settings-item-solidline clearfix">
+                        <h3 class="zg-left settings-item-left">语速大小</h3>
+                        <div class="zg-left settings-item-right">
+                            <div class="row settings-receive">
+                                <label>
+                        <input type="radio" name="column-update-receive" value="all" />
+                        强
+                        </label>
+                                <label>
+                        <input type="radio" name="column-update-receive" value="all" checked />
+                        中
+                        </label>
+                                <label>
+                                <input type="radio" name="column-update-receive" value="all"  />
+                                弱
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <div data-type="weekly_omnibus" class="settings-item settings-item-solidline clearfix">
+                        <h3 class="zg-left settings-item-left">开关人员权限</h3>
+                        <div class="zg-left settings-item-right">
+                            <div class="row settings-bo">
+
+                                <label>
+                                                                        <input type="radio" name="answer-voteup-bo" value="all"  />
+                                                                        播报最高级别
+                                                                        </label>
+                                <label>
+                                                                        <input type="radio" name="answer-voteup-bo" value="all" />
+                                                                        同级别一起播报
+                                                                        </label>
+
+                                <label>
+                                                                        <input type="radio" name="answer-voteup-bo" value="all" checked/>
+                                                                        全部播报
+                                                                        </label>
+                            </div>
+
+                        </div>
+                    </div>
+
+
+                </section>
+                <section class="settings-item-wrapper">
+                    <h2>门禁设置</h2>
+                    <p class="settings-item-intro">你可以在这设置开关人员的权限和权限时间</p>
+                    <div data-type="weekly_omnibus" class="settings-item settings-item-solidline clearfix">
+                        <h3 class="zg-left settings-item-left">开关人员权限</h3>
+                        <div class="zg-left settings-item-right">
+                            <div class="row settings-doors">
+
+                                <label>
+                                                                    <input type="radio" name="answer-voteup-receives" value="all"  />
+                                                                    优先显示高级别
+                                                                    </label>
+                                <label>
+                                                                    <input type="radio" name="answer-voteup-receives" value="all" />
+                                                                    同级别一起显示
+                                                                    </label>
+
+                                <label>
+                                                                    <input type="radio" name="answer-voteup-receives" value="all" checked/>
+                                                                    只显示一人
+                                                                    </label>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div data-type="new_activity" class="settings-item settings-item-solidline clearfix">
+                        <h3 class="zg-left settings-item-left">开关时间</h3>
+                        <div class="zg-left settings-item-right">
+                            <div class="row settings-door">
+                                <label>
+                        <input type="radio" name="door-update-receive" value="all" checked/>
+                        1小时
+                        </label>
+                                <label>
+                            <input type="radio"  name="door-update-receive" value="all"/>
+                            3小时
+                            </label> <label>
+                                <input type="radio"  name="door-update-receive" value="all"/>
+                                24小时
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                </section>
+
+            </div>
+
+            <div class="tab-pane fade" id="pzhi">
+                <button type="button" class="btn btn-primary btn-lg newbut" data-toggle="modal" data-target="#shebei">添加设备</button>
+                <div class="lable">
+                    <ul>
+                        <li>
+                            <div class="lable-title" title="主机盒子">
+                                <h2>主机盒子</h2>
+                                <img src="img/hezi.png">
+
+                            </div>
+                            <div class="lable-content">
+                                <p>
+                                    <span>设备串号：</span>
+                                    <span>wfqw2fqw6ffqkjqwf2qfkjqwf5</span>
+                                </p>
+
+                                <p>
+                                    <span>服务器IP：</span>
+                                    <span>10.168.1.1</span>
+                                </p>
+                                <p>
+                                    <span>本机IP：</span>
+                                    <span>192.168.1.1</span>
+                                </p>
+                                <p>
+                                    <span>创建时间：</span>
+                                    <span>2017-10-11</span>
+                                </p>
+                            </div>
+                            <div class="lable-footer">
+                                <a href="#" class="border">编辑</a>
+                                <a href="#" data-toggle="modal" data-target="#del">删除</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="lable-title" title="摄像头">
+                                <h2>摄像头</h2>
+                                <img src="img/video.png">
+
+                            </div>
+                            <div class="lable-content">
+                                <p>
+                                    <span>RTSP地址：</span>
+                                    <span>wfqw2fqw6ffqkjqwf2qfkjqwf5</span>
+                                </p>
+                                <p>
+                                    <span>开关token：</span>
+                                    <span>192.168.1.1</span>
+                                </p>
+
+                                <p>
+                                    <span>本机IP：</span>
+                                    <span>192.168.1.1</span>
+                                </p>
+
+                                <p>
+                                    <span>创建时间：</span>
+                                    <span>2017-10-11</span>
+                                </p>
+
+                            </div>
+                            <div class="lable-footer">
+                                <a href="#" class="border">编辑</a>
+                                <a href="#" data-toggle="modal" data-target="#del">删除</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="lable-title" title="摄像头">
+                                <h2>开关</h2>
+                                <img src="img/on.png">
+
+                            </div>
+                            <div class="lable-content">
+
+                                <p>
+                                    <span>开关token：</span>
+                                    <span>192.168.1.1</span>
+                                </p>
+
+                                <p>
+                                    <span>本机IP：</span>
+                                    <span>192.168.1.1</span>
+                                </p>
+
+                                <p>
+                                    <span>创建时间：</span>
+                                    <span>2017-10-11</span>
+                                </p>
+
+                            </div>
+                            <div class="lable-footer">
+                                <a href="#" class="border">编辑</a>
+                                <a href="#" data-toggle="modal" data-target="#del">删除</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="lable-title" title="电视荧屏">
+                                <h2>电视荧屏</h2>
+                                <img src="img/tv.png">
+
+                            </div>
+                            <div class="lable-content">
+
+                                <p>
+                                    <span>电视连接状态：</span>
+                                    <span class="state">已连接</span>
+
+                                </p>
+
+                                <p>
+                                    <span>连接摄像头：</span>
+                                    <span>192.168.1.1</span>
+                                </p>
+
+                                <p>
+                                    <span>创建时间：</span>
+                                    <span>2017-10-11</span>
+                                </p>
+
+                            </div>
+                            <div class="lable-footer">
+                                <a href="#" class="border">编辑</a>
+                                <a href="#" data-toggle="modal" data-target="#del">删除</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="clear"></div>
+                </div>
+            </div>
+            <div class="clear"></div>
+        </div>
+
+
+    </section>
+
+    <!-- 修改邮箱 -->
+    <div id="email" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel" style="float:left;">邮箱</h4>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div id="nextt">
+                            <div class="form-group Eject">
+                                <p>旧邮箱<span>kaytion@kaytion.com</span>验证邮件已发出，去查收或<a href="#" class="again"> 再发一次</a></p>
+                                <label>验证码：</label>
+                                <input type="text" class="form-control" name="email" style="margin-right: 0px;margin-bottom:20px;">
+                            </div>
+                            <button class="btn btn-lg btn-primary btn-block" type="button" style="background-color: #1E35D5;color:#fff;font-size:14px;" id="next">下一步</button>
+
+                        </div>
+                        <div class="Eject hieedn" style="display: none" id="show">
+                            <div class="email-cont form-group ">
+                                <label>新邮箱：</label>
+                                <input type="email" class="form-control" name="email" id="email" required />
+                            </div>
+                            <div class="email-cont new form-group ">
+                                <label>验证码：</label>
+                                <input type="text" class="form-control" name="yz" required />
+                                <input type="button" href="javascript:" name="yz" class="email-yz" id="btn" value="获取验证码" />
+                            </div>
+                            <button class="btn btn-lg btn-primary btn-block" type="submit" style="background-color: #1E35D5;color:#fff;font-size:14px;" onclick="update()">绑定</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 修改手机号 -->
+    <div id="phone" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel" style="float:left;">手机</h4>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+                        <div id="phone-cont">
+                            <div class="form-group Eject" style="margin-bottom:20px">
+                                <p>旧手机号 <span>138 8888 8888</span> 验证邮件已发出，请查收或<a href="#" class="again"> 再发一次</a></p>
+                                <label>验证码：</label>
+                                <input type="text" class="form-control" name="yz" style="margin-right: 0px;margin-bottom:20px;">
+                            </div>
+                            <button class="btn btn-lg btn-primary btn-block" type="button" style="background-color: #1E35D5;color:#fff;font-size:14px;" id="phones">下一步</button>
+
+                        </div>
+
+                        <div class=" Eject hieedn" style="display: none" id="phone-show">
+                            <div class="phone-cont form-group">
+                                <label>手机号：</label>
+                                <input type="phone" class="form-control" name="phone" id="phone" required />
+                            </div>
+                            <div class="phone-cont new form-group">
+                                <label>验证码：</label>
+                                <input type="phone" class="form-control" name="yz" id="phone" required />
+                                <input type="button" href="javascript:" class="phone-yz" id="btn" value="获取验证码" />
+                            </div>
+                            <button class="btn btn-lg btn-primary  btn-block" type="submit" style="background-color: #1E35D5;color:#fff;font-size:14px;">绑定</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 修改用户名 -->
+    <div id="xiugai" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel" style="float:left;">修改</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group Eject" style="margin-bottom: 15px;height:40px;">
+                            <label for="username ">登录名：</label>
+                            <input type="text" class="form-control" value="广州康行信息技术有限公司" required></input>
+                        </div>
+                        <button class="btn btn-lg btn-primary btn-block" type="submit" style="background-color: #1E35D5;color:#fff;font-size:14px;" onclick="update()">确认</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 修改公司名 -->
+    <div id="gsming" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel" style="float:left;">修改</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group Eject" style="margin-bottom: 15px;height:40px;">
+                            <label for="username ">公司名：</label>
+                            <input type="text" class="form-control" value="广州康行信息技术有限公司" required></input>
+                        </div>
+                        <button class="btn btn-lg btn-primary btn-block" type="submit" style="background-color: #1E35D5;color:#fff;font-size:14px;" onclick="update()">确认</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 添加子账号 -->
+    <div id="gridSystemModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel">
+        <div class="modal-dialog" role="document ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" value="">&times;</span></button>
+                    <h4 class="modal-title" id="gridModalLabel">添加子账号</h4>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+
+
+                        <div class="form-group">
+                            <label for="username ">姓名：</label>
+                            <input type="text" class="form-control" placeholder="请输入子账号姓名" name="username" id="username" value="" required></input>
+                        </div>
+                        <div class="form-group">
+                            <label for="profession">选择部门权限：</label>
+                            <select id="profession" class="form-control"> 
+                                 <option value="1">采购处</option> 
+                                 <option value="2">财务部</option> 
+                                 <option value="3">研发部</option> 
+                             
+                                </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tel">登录邮箱：</label>
+                            <input type="emial" class="form-control" id="neme" placeholder="邮箱/用户名" name="name" required> </input>
+                        </div>
+                        <div class="form-group">
+                            <label>登录密码：</label>
+                            <input type="text" class="form-control" name="Password" id="Password" placeholder="密码" required/>
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-lg btn-block" type="text" style="background-color: #1E35D5;color:#fff;font-size:14px;">确认添加</button>
+
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- 添加设备 -->
+    <div id="shebei" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel" style="margin-top:150px;">
+        <div class="modal-dialog" role="document ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true ">&times;</span></button>
+                    <h4 class="modal-title" id="gridModalLabel">添加设备</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="icon-sb" border="0" cellpadding="1" cellspacing="1" id="step_1">
+                        <ul>
+                            <li>
+                                <a href="#" onclick="javascript:step1()" title="主机盒子"><img src="img/hezi.png"></a>
+                                <span>主机盒子</span>
+                            </li>
+                            <li>
+                                <a href="#" title="摄像头" onclick="javascript:step2()"><img src="img/video.png"></a>
+                                <span>摄像头</span>
+                            </li>
+                            <li>
+                                <a href="#" title="开关" onclick="javascript:step3()"><img src="img/on.png"></a>
+                                <span>开关</span>
+                            </li>
+                            <li>
+                                <a href="#" title="电视荧屏" onclick="javascript:step4()"><img src="img/tv.png"></a>
+                                <span>电视荧屏</span>
+                            </li>
+                        </ul>
+
+
+                        <div class="clear"></div>
+                    </div>
+                    <div class="icon-body">
+                        <div class="chao hieedn" style="display: none" id="step_2">
+                            <a href="#" onclick="javascript:up2()" class="back"><img src="img/back.png" width="30%">返回</a>
+                            <div class="form-group">
+                                <label>设备串号：</label>
+                                <input type="text" class="form-control" name="chao" id="chao" />
+                            </div>
+                            <div class="form-group">
+                                <label>服务器IP：</label>
+                                <input type="text" class="form-control" name="server" id="server-ip" />
+                            </div>
+                            <div class="form-group">
+                                <label>本机IP：</label>
+                                <input type="text" class="form-control" name="press" id="press-ip" />
+                            </div>
+                            <button class="btn btn-lg btn-primary btn-block" type="text" style="background-color: #1E35D5;color:#fff;font-size:14px;width:40%;margin:0 auto;">添加</button>
+                        </div>
+                        <div class="hieedn" style="display: none" id="step_3">
+                            <a href="#" onclick="javascript:up3()" class="back"><img src="img/back.png" width="30%">返回</a>
+                            <div class="form-group">
+                                <label>RTSP地址</label>
+                                <input type="text" class="form-control" name="RTSP" id="RTSP" />
+                            </div>
+                            <div class="form-group">
+                                <label>开关token</label>
+                                <input type="text" class="form-control" name="token" id="token" />
+                            </div>
+                            <div class="form-group">
+                                <label>本机IP</label>
+                                <input type="text" class="form-control" name="press" id="press-ip" />
+                            </div>
+                            <button class="btn btn-lg btn-primary btn-block" type="text" style="background-color: #1E35D5;color:#fff;font-size:14px;width:40%;margin:0 auto;">添加</button>
+                        </div>
+
+                        <div class="hieedn" style="display: none" id="step_4">
+                            <a href="#" onclick="javascript:up4()" class="back"><img src="img/back.png" width="30%">返回</a>
+                            <div class="form-group">
+                                <label>开关token</label>
+                                <input type="text" class="form-control" name="token" id="token" />
+                            </div>
+                            <div class="form-group">
+                                <label>本机IP</label>
+                                <input type="text" class="form-control" name="press" id="press-ip" />
+                            </div>
+                            <button class="btn btn-lg btn-primary btn-block" type="text" style="background-color: #1E35D5;color:#fff;font-size:14px;width:40%;margin:0 auto;">添加</button>
+                        </div>
+                        <div class="hieedn" style="display: none" id="step_5">
+                            <a href="#" onclick="javascript:up5()" class="back"><img src="img/back.png" width="30%">返回</a>
+                            <div class="form-group">
+                                <label>连接摄像头</label>
+                                <input type="text" class="form-control" name="camera" id="camera" />
+                            </div>
+
+                            <button class="btn btn-lg btn-primary btn-block" type="text" style="background-color: #1E35D5;color:#fff;font-size:14px;width:40%;margin:0 auto;">添加</button>
+                        </div>
+                    </div>
+                    <script>
+                        function step1() {
+                            document.getElementById('step_1').style.display = 'none';
+                            document.getElementById('step_2').style.display = 'block';
+                        }
+
+                        function up2() {
+                            document.getElementById('step_1').style.display = 'block';
+                            document.getElementById('step_2').style.display = 'none';
+                        }
+
+                        function step2() {
+                            document.getElementById('step_1').style.display = 'none';
+                            document.getElementById('step_3').style.display = 'block';
+                        }
+
+                        function up3() {
+                            document.getElementById('step_1').style.display = 'block';
+                            document.getElementById('step_3').style.display = 'none';
+                        }
+
+                        function step3() {
+                            document.getElementById('step_1').style.display = 'none';
+                            document.getElementById('step_4').style.display = 'block';
+                        }
+
+                        function up4() {
+                            document.getElementById('step_1').style.display = 'block';
+                            document.getElementById('step_4').style.display = 'none';
+                        }
+
+                        function step4() {
+                            document.getElementById('step_1').style.display = 'none';
+                            document.getElementById('step_5').style.display = 'block';
+                        }
+
+                        function up5() {
+                            document.getElementById('step_1').style.display = 'block';
+                            document.getElementById('step_5').style.display = 'none';
+                        }
+                    </script>
+                </div>
+
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- 图片查看 -->
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" id="pic">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content" style="background-color: rgba(0,0,0,0);">
+                <img src="http://img.hb.aicdn.com/02fff8733fb4a8302f390f18f3c18ee71fb5de8e6ae5-7hqHAI_fw658" style="width:100%">
+            </div>
+        </div>
+    </div>
+    <!-- 删除弹出框 -->
+    <div id="del" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="gridSystemModalLabel">您确定要删除?</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        张三
+                    </p>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" style="background: #1E35D5;">删除</button>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- 编辑子账号 -->
+    <div id="bianji" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel">
+        <div class="modal-dialog" role="document ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true ">&times;</span></button>
+                    <h4 class="modal-title" id="gridModalLabel">添加子账号</h4>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+
+
+                        <div class="form-group">
+                            <label for="username ">姓名：</label>
+                            <input type="text" class="form-control bianji" placeholder="请输入子账号姓名" name="username" id="username" required value="张三"></input>
+                        </div>
+                        <div class="form-group">
+                            <label for="profession">选择部门权限：</label>
+                            <select id="profession" class="form-control quanxian"> 
+                                 <option value="1">采购处</option> 
+                                 <option value="2">财务部</option> 
+                                 <option value="3">研发部</option> 
+                             
+                                </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="tel">登录邮箱/用户名：</label>
+                            <input type="email" class="form-control email" id="neme" placeholder="邮箱/用户名" name="name" required value="zhangshan@kaytion.com"> </input>
+                        </div>
+                        <div class="form-group">
+                            <label>登录密码：</label>
+                            <input type="text" class="form-control password" name="Password" id="Password" placeholder="密码" required value="kaytion.com" />
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-lg btn-block" type="submit" style="background-color: #1E35D5;color:#fff;font-size:14px;">确认添加</button>
+
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+</body>
+
+<!-- 验证 -->
+<script src="js/jquery-1.11.1.min.js"></script>
+
+<!-- 验证表单-->
+<script>
+    $(function() {
+        $('form').bootstrapValidator({
+            message: '输入值不合法',
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+
+                phone: {
+                    message: '电话号码无效',
+                    validators: {
+                        notEmpty: {
+                            message: '手机号码不能为空'
+                        },
+
+                        regexp: {
+                            regexp: /^1[3|5|8]{1}[0-9]{9}$/,
+                            message: '手机号码格式错误'
+                        }
+                    }
+                },
+                yz: {
+                    message: '验证码不能为空',
+                    validators: {
+                        notEmpty: {
+                            message: '验证码不能为空'
+                        },
+                        stringLength: {
+                            min: 4,
+                            max: 4,
+                            message: '请输入4位验证码'
+                        },
+
+
+                    }
+
+                },
+                email: {
+                    validators: {
+                        notEmpty: {
+                            message: '邮箱不能为空'
+                        },
+                        emailAddress: {
+                            message: '输入正确的邮件地址'
+                        }
+                    }
+                },
+                username: {
+                    message: '用户名验证失败',
+                    validators: {
+                        notEmpty: {
+                            message: '用户名不能为空'
+                        },
+                        stringLength: {
+                            min: 3,
+                            max: 30,
+                            message: '请输入3到30个字符'
+                        },
+                        regexp: {
+                            regexp: /^[a-zA-Z0-9_\. \u4e00-\u9fa5 ]+$/,
+                            message: '用户名只能由字母、数字、点、下划线和汉字组成 '
+                        }
+
+
+
+                    }
+                },
+                Password: {
+                    message: '密码',
+                    validators: {
+                        notEmpty: {
+                            message: '密码不能为空'
+                        },
+
+
+                    }
+                },
+                olpwd: {
+                    message: '密码',
+                    validators: {
+                        notEmpty: {
+                            message: '*原密码不能为空'
+                        },
+
+
+                    }
+                },
+                name: {
+                    message: '用户名',
+                    validators: {
+                        notEmpty: {
+                            message: '登录账号不能为空'
+                        },
+
+
+                    }
+                },
+                newPwd: {
+                    validators: {
+                        notEmpty: {
+                            message: '*新密码不能为空'
+                        }
+                    }
+                },
+                checkPwd: {
+                    validators: {
+                        notEmpty: {
+                            message: '*确认密码不能为空'
+                        },
+                        identical: {
+                            field: 'newPwd',
+                            message: '*两次输入密码不一致'
+                        }
+                    }
+                },
+
+            }
+
+        });
+
+    });
+    $("#submitBtn").click(function() {
+        //进行表单验证
+        var bv = form.data('bootstrapValidator');
+        bv.validate();
+        if (bv.isValid()) {
+            console.log(form.serialize());
+            //发送ajax请求
+            $.ajax({
+                url: 'validator.json',
+                async: false, //同步，会阻塞操作
+                type: 'GET', //PUT DELETE POST
+                data: form.serialize(),
+                complete: function(msg) {
+                    console.log('完成了');
+                },
+                success: function(result) {
+                    console.log(result);
+                    if (result) {
+                        window.location.reload();
+                    } else {
+                        $("#returnMessage").hide().html('<label class="label label-danger">修改失败!</label>').show(300);
+                    }
+                },
+                error: function() {
+                    $("#returnMessage").hide().html('<label class="label label-danger">修改失败!</label>').show(300);
+                }
+            })
+        }
+    });
+</script>
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script src="http://cdn.bootcss.com/jquery/1.11.3/jquery.min.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<!-- 保存成功 -->
+<script>
+    var layer = document.createElement("div");
+    layer.id = "layer";
+    layer.innerHTML = "保存成功"
+
+    function func() {
+        var style = {
+            position: "absolute",
+            background: "#1E35D5",
+            position: "absolute",
+            zIndex: 10,
+            padding: "10px",
+            left: "45%",
+            top: "50%",
+            color: "#fff",
+            borderRadius: "5px",
+        }
+
+        for (var i in style)
+            layer.style[i] = style[i];
+        if (document.getElementById("layer") == null) {
+            document.body.appendChild(layer);
+            setTimeout("document.body.removeChild(layer)", 2000)
+        }
+    }
+</script>
+
+<script type="text/javascript">
+    //邮箱
+    $("#next").bind("click", function(event) {
+        $("#show").show()
+    });
+    $("#next").bind("click", function(event) {
+        $("#nextt").hide()
+    });
+    //手机
+    $("#phones").bind("click", function(event) {
+        $("#phone-show").show()
+    });
+    $("#phones").bind("click", function(event) {
+
+        $("#phone-cont").hide()
+    });
+
+    $('#gridSystemModal').on('hidden.bs.modal', '.modal', function() {
+        alert('成功')
+
+
+    });
+</script>
+
+<script>
+    //编辑
+    $('#bianji').on('show.bs.modal', function(event) {
+            var button = $(event.relatedTarget) // Button that triggered the modal
+            var recipient = button.data('whatever') // Extract info from data-* attributes
+                // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
+                // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
+            var modal = $(this)
+            modal.find('.modal-body .bianji').val('张中')
+            modal.find('.modal-body .quanxian').val('3')
+            modal.find('.modal-body .email').val('123@qq.com')
+            modal.find('.modal-body .password').val('123.com')
+        })
+        //删除
+    $('#del').on('show.bs.modal', function(event) {
+        var button = $(event.relatedTarget) // 触发事件的按钮  
+        var recipient = button.data('whatever') // 解析出data-whatever内容  
+        var modal = $(this)
+
+        modal.find('.modal-body p').text('123')
+    })
+</script>
+<!--修改密码验证 -->
+<script>
+</script>
+<!--弹出框头像上传-->
+<script>
+    //获取上传按钮
+    var input1 = document.getElementById("upload_l");
+
+    if (typeof FileReader === 'undefined') {
+        //result.innerHTML = "抱歉，你的浏览器不支持 FileReader"; 
+        input1.setAttribute('disabled', 'disabled');
+    } else {
+        input1.addEventListener('change', readFile, false);
+        /*input1.addEventListener('change',function (e){
+        	console.log(this.files);//上传的文件列表
+        },false); */
+    }
+
+    function readFile() {
+        var file = this.files[0]; //获取上传文件列表中第一个文件
+        if (!/image\/\w+/.test(file.type)) {
+            //图片文件的type值为image/png或image/jpg
+            alert("文件必须为图片！");
+            return false;
+        }
+        // console.log(file);
+        var reader = new FileReader(); //实例一个文件对象
+        reader.readAsDataURL(file); //把上传的文件转换成url
+        //当文件读取成功便可以调取上传的接口
+        reader.onload = function(e) {
+            // console.log(this.result);//文件路径
+            // console.log(e.target.result);//文件路径
+            /*var data = e.target.result.split(',');
+            var tp = (file.type == 'image/png')? 'png': 'jpg';
+            var imgUrl = data[1];//图片的url，去掉(data:image/png;base64,)
+            //需要上传到服务器的在这里可以进行ajax请求
+            // console.log(imgUrl);
+            // 创建一个 Image 对象 
+            var image = new Image();
+            // 创建一个 Image 对象 
+            // image.src = imgUrl;
+            image.src = e.target.result;
+            image.onload = function(){
+            	document.body.appendChild(image);
+            }*/
+
+            var image = new Image();
+            // 设置src属性 
+            image.src = e.target.result;
+            var max = 200;
+            // 绑定load事件处理器，加载完成后执行，避免同步问题
+            image.onload = function() {
+                // 获取 canvas DOM 对象 
+                var canvas = document.getElementById("cvss");
+                // 如果高度超标 宽度等比例缩放 *= 
+                /*if(image.height > max) {
+                	image.width *= max / image.height; 
+                	image.height = max;
+                } */
+                // 获取 canvas的 2d 环境对象, 
+                var ctx = canvas.getContext("2d");
+                // canvas清屏 
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                // 重置canvas宽高
+                /*canvas.width = image.width;
+                canvas.height = image.height;
+                if (canvas.width>max) {canvas.width = max;}*/
+                // 将图像绘制到canvas上
+                // ctx.drawImage(image, 0, 0, image.width, image.height);
+                ctx.drawImage(image, 0, 0, 50, 50);
+                // 注意，此时image没有加入到dom之中
+            };
+        }
+    };
+</script>
+<script src="js/bootstrapValidator.min.js"></script>
+
+
+</html>

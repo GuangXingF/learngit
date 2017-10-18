@@ -1,0 +1,495 @@
+html {
+    background-color: #fff;
+}
+
+#container {
+    padding: 30px;
+    background-color: #fff;
+}
+
+.nav-tabs>li.active>a,
+.nav-tabs>li.active>a:focus,
+.nav-tabs>li.active>a:hover {
+    color: #fff;
+    cursor: default;
+    background-color: #1E35D5;
+    border: 1px solid #ddd;
+    border-bottom-color: transparent;
+}
+
+a {
+    color: #1E35D5
+}
+
+#container #myTabContent .con4 .btn:hover {
+    background-color: #fff;
+    ;
+}
+
+#myTabContent {
+    padding: 20px;
+}
+
+#cvss {
+    float: left;
+    margin-left: 50px;
+    margin-top: 13px;
+}
+
+#myTabContent .upload {
+    float: right;
+    height: 50px;
+    width: 100px;
+    right: 0;
+    color: #333;
+    border-radius: 0;
+}
+
+#myTabContent .btn.focus,
+.btn:focus,
+.btn:hover {
+    background-color: #1E35D5;
+    color: #fff
+}
+
+.btn.active,
+.btn:active {
+    box-shadow: none;
+}
+
+.nav-tabs>li>a {
+    border-radius: 4px;
+}
+
+#myTabContent .form-control {
+    float: left;
+}
+
+.title {
+    margin-top: 10px;
+    width: 9%;
+    float: left;
+}
+
+#myTabContent .form-group {
+    border-bottom: 1px solid #f3f3f3;
+    height: 50px;
+}
+
+#myTabContent .form-group p {
+    line-height: 38px;
+    font-size: 14px;
+    float: left;
+}
+
+#myTabContent .form-group span a {
+    line-height: 40px;
+    float: right;
+    color: #333;
+}
+
+#myTabContent .form-group span a:hover {
+    color: #1E35D5;
+}
+
+#myTabContent .form-group span a {
+    font-size: 14px;
+}
+
+.newbut {
+    width: 98px;
+    height: 40px;
+    display: block;
+    background-color: #1E35D5;
+    font-size: 12px;
+    color: #fff;
+    border-radius: 0;
+}
+
+.again {
+    color: #333;
+    font-weight: 700;
+}
+
+.again:hover {
+    color: #1E35D5;
+    text-decoration: underline;
+}
+
+.Eject label {
+    float: left;
+    line-height: 40px;
+}
+
+.Eject input {
+    float: left;
+    width: 70%;
+    margin-right: 20px;
+}
+
+.email-yz {
+    background-color: #1E35D5;
+    color: #fff;
+    font-size: 14px;
+    width: 17%;
+    display: block;
+    float: right;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+#email .email-cont i {
+    top: 3px;
+    right: -10px;
+}
+
+#phone-show .phone-cont i {
+    top: 3px;
+    right: -10px;
+}
+
+.email-yz:hover {
+    color: #Fff
+}
+
+.email-yz:hover,
+.email-yz:focus {
+    color: #Fff;
+}
+
+#btn {
+    width: 17%;
+    margin: 0;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 21px;
+    border-radius: 0;
+}
+
+.email-cont {
+    width: 100%;
+    float: left;
+}
+
+.new {
+    position: relative;
+}
+
+.phone-yz {
+    background-color: #1E35D5;
+    color: #fff;
+    font-size: 14px;
+    width: 17%;
+    display: block;
+    float: right;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.phone-yz:hover {
+    color: #Fff
+}
+
+.phone-yz:hover,
+.phone-yz:focus {
+    color: #Fff;
+}
+
+.phone-cont {
+    width: 100%;
+    float: left;
+}
+
+.phone-cont input {
+    width: 87.3%;
+}
+
+
+/*子账号*/
+
+#son ul li {
+    float: left;
+    padding: 15px;
+    display: block;
+    border: 1px solid #f3f3f3;
+    width: 100%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 5px 11px rgba(0, 0, 0, 0.05);
+}
+
+.son-title {
+    height: 40px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.son-title h3 {
+    float: left;
+    margin: 0;
+    color: #1E35D5;
+}
+
+.son-title p {
+    float: right;
+    font-size: 12px;
+}
+
+.son-title p a {
+    margin-left: 20px;
+}
+
+.son-cont p {
+    float: left;
+    margin-left: 20px;
+}
+
+.son-cont a {
+    float: right;
+}
+
+
+/*安全设置*/
+
+#security .form-control {
+    float: none;
+    width: 100%;
+}
+
+#security .form-group {
+    height: 100%;
+    border: none;
+}
+
+#menu {
+    display: none;
+    float: left;
+}
+
+#text {
+    margin-right: 10px;
+}
+
+.settings-item-wrapper h2 {
+    font-size: 15px;
+}
+
+.settings-item.settings-item-solidline {
+    padding-top: 24px;
+    padding-bottom: 10px;
+}
+
+.settings-item {
+    padding: 12px 0;
+    width: 100%;
+}
+
+.settings-item .settings-item-left {
+    width: 234px;
+    margin-bottom: 16px;
+}
+
+.zg-left {
+    float: left;
+}
+
+.settings-item .settings-item-right .row {
+    margin-bottom: 10px;
+    margin-left: 0;
+}
+
+.settings-item .settings-item-right label {
+    width: 234px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.settings-item .settings-item-right .row input[type=radio] {
+    margin-right: 5px;
+}
+
+div[contentEditable],
+input,
+textarea,
+button,
+a:link {
+    -webkit-tap-highlight-color: rgba(225, 225, 225, .5);
+}
+
+.settings-item-wrapper h2 {
+    font-size: 15px;
+    color: #000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-weight: 700;
+    font-size: 14px;
+    outline: 0;
+    margin: 0;
+}
+
+body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 13px;
+    line-height: 1.7;
+    word-wrap: break-word;
+}
+
+.settings-item-wrapper .settings-item-intro {
+    color: #999;
+    margin-top: 6px;
+}
+
+.settings-item {
+    padding: 12px 0;
+    width: 100%;
+}
+
+.settings-item-solidline+.settings-item-solidline {
+    border-top: 1px solid #eee;
+}
+
+.settings-item-wrapper+.settings-item-wrapper {
+    border-top: 1px solid #ccc;
+}
+
+.settings-item-wrapper {
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+
+/*设备配置*/
+
+.clear {
+    clear: both;
+}
+
+.lable {
+    margin-top: 20px;
+}
+
+.lable ul li {
+    float: left;
+    display: block;
+    border: 1px solid #f3f3f3;
+    box-shadow: 0px 5px 11px rgba(0, 0, 0, 0.05);
+    width: 350px;
+    margin: 23px;
+    border-radius: 5px;
+}
+
+.lable-title {
+    border-bottom: 1px solid #f3f3f3;
+    height: 80px;
+    padding: 20px;
+}
+
+.lable-title h2 {
+    color: #1E35D5;
+    float: left;
+    line-height: 38px;
+    font-size: 16px;
+}
+
+.lable-title img {
+    width: 38px;
+    height: 38px;
+    float: right;
+}
+
+.lable-content {
+    padding: 20px;
+    border-bottom: 1px solid #f3f3f3;
+    height: 170px;
+}
+
+.lable-footer a {
+    float: left;
+    display: block;
+    height: 50px;
+    width: 50%;
+    text-align: center;
+    line-height: 50px;
+}
+
+.lable-footer .border:hover {
+    color: #fff;
+    background-color: #1E35D5;
+    border-radius: 0 0 0 5px;
+}
+
+.lable-footer a:focus {
+    color: #1E35D5;
+}
+
+.lable-footer a:hover {
+    color: #fff;
+    background-color: #1E35D5;
+    border-radius: 0 0 5px 0;
+}
+
+.border {
+    border-right: 1px solid #f3f3f3;
+}
+
+.state {
+    font-weight: bold;
+}
+
+.icon-sb {
+    padding: 20px;
+}
+
+.icon-sb a {
+    display: block;
+    border: 1px solid #f3f3f3;
+    float: left;
+    padding: 10px;
+    height: 120px;
+    width: 120px;
+    text-align: center;
+    border-radius: 50%;
+    line-height: 100px;
+    margin-bottom: 10px;
+}
+
+.icon-sb a img {
+    width: 40%;
+}
+
+.icon-sb li {
+    width: 120px;
+    text-align: center;
+    float: left;
+    height: 100%;
+    display: block;
+    margin-left: 28px;
+}
+
+.icon-sb span {
+    margin-top: 5px;
+}
+
+#shebei .modal-dialog {
+    width: 700px;
+}
+
+.back {
+    display: block;
+    margin-bottom: 20px;
+    width: 53px;
+}
+
+.back img {
+    margin-right: 5px;
+}

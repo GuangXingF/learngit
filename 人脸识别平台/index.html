@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge，chrome=1">
+    <meta http-equiv="Page-Enter" content="blendTrans(Duration=2.0)" />
+    <title>kaytion</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+
+
+
+
+
+    <link rel="stylesheet" href="css/index.css">
+    <!-- 头部 -->
+    <link rel="stylesheet" src="css/font-awesome/css/font-awesome.css"></link>
+    <link rel="stylesheet" href="css/simplify.css">
+    <script src="js/simplify.js"></script>
+
+
+    <!-- Jquery -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+
+    <!-- 侧栏css-->
+    <link href="css/style.css" rel="stylesheet">
+
+
+
+    <!--图表-->
+    <link rel="stylesheet" href="css/example.css">
+    <link rel="stylesheet" href="css/prettify.min.css">
+    <link rel="stylesheet" href="css/morris.css">
+
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/raphael-min.js"></script>
+    <script src="js/morris.js"></script>
+    <script src="js/morris.min.js"></script>
+    <script src="js/example.js"></script>
+
+
+
+</head>
+<style type="text/css">
+
+</style>
+
+<body>
+
+    <section id="container" class="sidebar-close">
+        <header class="header white">
+
+
+            <div class="content">
+                <div class="left">
+                    <div class="logo">
+                        <a href="index.html"><img src="img/logo.png"></a>
+                    </div>
+                </div>
+                <div class="right top-nav">
+                    <ul class="nav pull-right top-menu nav-notification">
+                        <li><input type="text" class="form-control search  "></li>
+                        <li>
+
+                            <a href="#" class="sj" data-target=".shezhi" data-toggle="modal"><img src="img/sj.png"></a>
+
+                        </li>
+                        <li>
+                            <a href="#" class="xx" data-toggle="dropdown"><img src="img/xx.png"></a>
+                            <span class="badge badge-purple bounceIn animation-delay5 active">1</span>
+                            <ul class="dropdown-menu message pull-right" style="margin-top:4px;">
+                                <li><a>你有1个新的未读消息</a></li>
+                                <li>
+                                    <a class="clearfix" href="#"> <img src="img/t.png" alt="User Avatar">
+                                        <div class="detail"> <strong>李小明</strong>
+                                            <p class="no-margin">修改管理权</p>
+                                            <small class="text-muted"><i class="fa fa-check text-success"></i> 27分钟前</small>
+                                        </div>
+                                    </a>
+                                </li>
+                                <li><a href="#">查看全部消息</a></li>
+                            </ul>
+                        </li>
+                        <Li>
+                            <div class="user-block hidden-xs">
+                                <a href="#" id="userToggle" data-toggle="dropdown">
+                                    <img src="img/t.png" alt="" img-circle inline-block user-profile-pic "" width="40px" height="40px">
+                                    <div class="user-detail inline-block">
+                                        <i class="fa fa-angle-down"><img src="img/jiantou.png" width="10px" height="10px"></i>
+                                    </div>
+                                </a>
+                                <div class="panel border dropdown-menu user-panel">
+                                    <div class="panel-body paddingTB-sm">
+                                        <ul>
+                                            <li style="border-bottom:1px  #eee">
+                                                <a href="#"> <i><img src="img/yonhu.png" height="15px" width="15px"  style="margin-top:-5px;"></i><span class="m-left-xs">账户管理</span> </a>
+                                            </li>
+                                            <li>
+                                                <a href="login.html"> <i><img src="img/tuichu.png" height="15px" width="15px"style="margin-top:-5px;"></i><span class="m-left-xs">退出登陆</span> </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </Li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!--侧栏end-->
+        <aside>
+            <div id="sidebar" class="nav-collapse">
+                <!-- sidebar menu start-->
+                <ul class="sidebar-menu">
+                    <li class="active">
+                        <span class="soild"></span>
+                        <a href="index.html">
+
+                            <i class="gk_img" style="    background-image: url(img/gaikuang_b.png);"> </i>
+                            <span>概&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;况</span>
+                        </a>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="so_img"> </i>
+                            <span>信息查询</span>
+
+                        </a>
+
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="sj_img"> </i>
+                            <span>数据统计</span>
+
+                        </a>
+                        <ul class="sub">
+                            <li>
+
+                                <a class="" href="renyuan.html">人员查询</a>
+                            </li>
+                            <li style="border:none;"><a class="" href="#">识别查询</a></li>
+
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="gl_img"> </i>
+                            <span>用户管理</span>
+
+                        </a>
+                        <ul class="sub">
+                            <li>
+
+                                <a class="" href="shouquan.html">访客授权管理</a>
+                            </li>
+
+
+                        </ul>
+                    </li>
+
+
+
+                </ul>
+                <!-- sidebar menu end-->
+            </div>
+        </aside>
+        <!--侧栏end-->
+
+        <section id="main-content">
+            <section class="wrapper">
+                <div class="top" style="height:100px;">
+                    <div class="title">
+                        <h1>Kaytion</h1>
+                        <span>Welcome to artificial intelligence</span>
+                    </div>
+                    <div class="right_btn">
+                        <a href="#">人员查询</a>
+
+                        <a href="#">
+                            <button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#gridSystemModal" style="    width: 164px;height: 47px;display: block;font-size:14px;">
+                                添加人员
+                              </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="buju">
+                    <div class="renshu">
+                        <div class="renshu_title">
+                            <h4 style="font-size:20px;margin-top:15px;">总共人数</h4>
+                        </div>
+
+                        <ul class="renshu_content">
+                            <li>
+                                <h4>昨天新增人数+ </h4>
+                                <span>2,523</span>
+                            </li>
+                            <li>
+                                <h4>总共人数 </h4>
+                                <span>22,523</span>
+                            </li>
+                            <li style="margin-right:0;">
+                                <h4>删除人数- </h4>
+                                <span>23</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="fenbu">
+                        <div class="renshu_title">
+                            <h4 style="font-size:20px;margin-top:15px;color:#0248B7">人数</h4>
+                            <div id="graph"></div>
+                            <pre id="code" class="prettyprint linenums" style="display:none;">
+                       
+                        </pre>
+                        </div>
+                    </div>
+                </div>
+                <div class="bot_cont">
+                    <div class="bot_left">
+                        <div class="bot_title">
+                            <h4 style="font-size:20px;margin-top:15px;">新增人员列表</h4>
+                        </div>
+                        <div class="left_le">
+                            <ul>
+                                <li>
+                                    <div class="le_tx"><img src="img/le_tx.png"></div>
+                                    <div class="le_text">
+                                        <p>李小璐</p>
+                                        <span>管理人员</span>
+                                    </div>
+                                    <span class="look"><a href="#">查看</a></span>
+                                </li>
+                                <li>
+                                    <div class="le_tx"><img src="img/le_tx.png"></div>
+                                    <div class="le_text">
+                                        <p>李小璐</p>
+                                        <span>管理人员</span>
+                                    </div>
+                                    <span class="look"><a href="#">查看</a></span>
+                                </li>
+                                <li>
+                                    <div class="le_tx"><img src="img/le_tx.png"></div>
+                                    <div class="le_text">
+                                        <p>李小璐</p>
+                                        <span>管理人员</span>
+                                    </div>
+                                    <span class="look"><a href="#">查看</a></span>
+                                </li>
+                                <li>
+                                    <div class="le_tx"><img src="img/le_tx.png"></div>
+                                    <div class="le_text">
+                                        <p>李小璐</p>
+                                        <span>管理人员</span>
+                                    </div>
+                                    <span class="look"><a href="#">查看</a></span>
+                                </li>
+                                <li>
+                                    <div class="le_tx"><img src="img/le_tx.png"></div>
+                                    <div class="le_text">
+                                        <p>李小璐</p>
+                                        <span>管理人员</span>
+                                    </div>
+                                    <span class="look"><a href="#">查看</a></span>
+                                </li>
+                                <li>
+                                    <div class="le_tx"><img src="img/le_tx.png"></div>
+                                    <div class="le_text">
+                                        <p>李小璐</p>
+                                        <span>管理人员</span>
+                                    </div>
+                                    <span class="look"><a href="#">查看</a></span>
+                                </li>
+                                <li>
+                                    <div class="le_tx"><img src="img/le_tx.png"></div>
+                                    <div class="le_text">
+                                        <p>李小璐</p>
+                                        <span>管理人员</span>
+                                    </div>
+                                    <span class="look"><a href="#">查看</a></span>
+                                </li>
+                                <li>
+                                    <div class="le_tx"><img src="img/le_tx.png"></div>
+                                    <div class="le_text">
+                                        <p>李小璐</p>
+                                        <span>管理人员</span>
+                                    </div>
+                                    <span class="look"><a href="#">查看</a></span>
+                                </li>
+                                <li>
+                                    <div class="le_tx"><img src="img/le_tx.png"></div>
+                                    <div class="le_text">
+                                        <p>李小璐</p>
+                                        <span>管理人员</span>
+                                    </div>
+                                    <span class="look"><a href="#">查看</a></span>
+                                </li>
+                                <li>
+                                    <div class="le_tx"><img src="img/le_tx.png"></div>
+                                    <div class="le_text">
+                                        <p>李小璐</p>
+                                        <span>管理人员</span>
+                                    </div>
+                                    <span class="look"><a href="#">查看</a></span>
+                                </li>
+                                <li>
+                                    <div class="le_tx"><img src="img/le_tx.png"></div>
+                                    <div class="le_text">
+                                        <p>李小璐</p>
+                                        <span>管理人员</span>
+                                    </div>
+                                    <span class="look"><a href="#">查看</a></span>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                    <div class="bot_right">
+                        <div class="bot_title">
+                            <h4 style="font-size:20px;margin-top:15px;">总共人数</h4>
+                        </div>
+
+                        <div id="hero-bar" class="graph" style="width:100%; height:20%;margin-top: 30px;"></div>
+                    </div>
+                </div>
+            </section>
+        </section>
+
+    </section>
+
+
+
+
+    <!-- 添加弹出框 -->
+
+    <div id="gridSystemModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel">
+        <div class="modal-dialog" role="document ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true ">&times;</span></button>
+                    <h4 class="modal-title" id="gridModalLabel">添加人员</h4>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+
+                        <div class="form-group">
+
+                            <label for="username" style=" margin-top: 50px;">头像：</label>
+                            <div class="con4">
+
+                                <canvas id="cvs" width="80" height="80"></canvas>
+                                <span class="btn upload ">
+                                    <input type="file" class="upload_pic" id="upload" />
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="username ">姓名：</label>
+                            <input type="text" class="form-control" placeholder="请输入姓名" name="username" id="username" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="profession">选择性别：</label>
+                            <select id="profession" class="form-control"> 
+                                 <option>男</option> 
+                                 <option>女</option> 
+                                 <option>其他</option> 
+                                 <option>外星人</option> 
+                                </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="tel">部门：</label>
+                            <input type="text " class="form-control" placeholder="请输入您的部门" name="bumen" id="bumen" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="tel">职位：</label>
+                            <input type="text " class="form-control" placeholder="请输入您的职位" name="zhiwei" id="zhiwei" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="tel">手机号码：</label>
+                            <input type="text" class="form-control" id="phone" placeholder="请输入您的电话号码" name="phone" maxlength="13" required />
+                        </div>
+                        <div class="form-group">
+                            <label>身份证号：</label>
+                            <input type="text" class="form-control" name="card" id="card" placeholder="请输入您的身份证号" maxlength="18" required/>
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-lg btn-primary btn-block" type="submit" style="background-color: #0248B7;color:#fff;font-size:14px;">确认添加</button>
+
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+
+    <!-- 设置弹出框 -->
+    <div class="modal fade shezhi" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <iframe src="shezhi.html" style="border:none;width:100%;height:550px"></iframe>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!--侧栏js-->
+<script src="js/common-scripts.js"></script>
+<script>
+    var day_data = [{
+        "elapsed": "2017-08-10",
+        "value": 34
+    }, {
+        "elapsed": "2017-08-11",
+        "value": 24
+    }, {
+        "elapsed": "2017-08-12",
+        "value": 3
+    }, {
+        "elapsed": "2017-08-13",
+        "value": 12
+    }, {
+        "elapsed": "2017-08-14",
+        "value": 13
+    }, {
+        "elapsed": "2017-08-15",
+        "value": 22
+    }, {
+        "elapsed": "2017-08-16",
+        "value": 5
+    }, {
+        "elapsed": "2017-08-17",
+        "value": 26
+    }, {
+        "elapsed": "2017-08-18",
+        "value": 12
+    }, {
+        "elapsed": "2017-08-19",
+        "value": 19
+    }];
+    Morris.Line({
+        element: 'graph',
+        data: day_data,
+        xkey: 'elapsed',
+        ykeys: ['value'],
+        labels: ['人数'],
+        parseTime: false,
+        width: 100,
+        height: 20
+    });
+</script>
+
+<script>
+    var day_data = [{
+        "period": "2017-10-01",
+        "licensed": 3407,
+        "sorned": 660
+    }, {
+        "period": "2017-09-30",
+        "licensed": 3351,
+        "sorned": 629
+    }, {
+        "period": "2017-09-29",
+        "licensed": 3269,
+        "sorned": 618
+    }, {
+        "period": "2017-09-20",
+        "licensed": 3246,
+        "sorned": 661
+    }, {
+        "period": "2017-09-19",
+        "licensed": 3257,
+        "sorned": 667
+    }, {
+        "period": "2017-09-18",
+        "licensed": 3248,
+        "sorned": 627
+    }, {
+        "period": "2017-09-17",
+        "licensed": 3171,
+        "sorned": 660
+    }, {
+        "period": "2017-09-16",
+        "licensed": 3171,
+        "sorned": 676
+    }, {
+        "period": "2017-09-15",
+        "licensed": 3201,
+        "sorned": 656
+    }, {
+        "period": "2017-09-10",
+        "licensed": 3215,
+        "sorned": 622
+    }];
+    Morris.Bar({
+        element: 'hero-bar',
+        data: day_data,
+        xkey: 'period',
+        ykeys: ['licensed', 'sorned'],
+        labels: ['男', '女'],
+        xLabelAngle: 60,
+    });
+</script>
+
+<!-- 验证表单-->
+<script>
+    $(function() {
+        $('form').bootstrapValidator({
+            message: 'This value is not valid',
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                username: {
+                    message: '用户名验证失败',
+                    validators: {
+                        notEmpty: {
+                            message: '用户名不能为空'
+                        },
+                        stringLength: {
+                            min: 2,
+                            max: 5,
+                            message: '用户名长度必须在2到5位之间'
+                        },
+                        threshold: 2, //有6字符以上才发送ajax请求，（input中输入一个字符，插件会向服务器发送一次，设置限制，6字符以上才开始）
+
+
+                    }
+                },
+                phone: {
+                    message: '电话号码无效',
+                    validators: {
+                        notEmpty: {
+                            message: '手机号码不能为空'
+                        },
+                        stringLength: {
+                            min: 11,
+                            max: 11,
+                            message: '请输入11位手机号码'
+                        },
+                        regexp: {
+                            regexp: /^1[3|5|8]{1}[0-9]{9}$/,
+                            message: '请输入正确的手机号码'
+                        }
+                    }
+                },
+                card: {
+                    message: '身份证号码无效',
+                    validators: {
+                        notEmpty: {
+                            message: '身份证号码不能为空'
+                        },
+                        stringLength: {
+                            min: 18,
+                            max: 18,
+                            message: '请输入18位身份证号码'
+                        },
+
+                    }
+                },
+                bumen: {
+                    message: '非法部门',
+                    validators: {
+                        notEmpty: {
+                            message: '部门不能为空'
+                        },
+
+
+                    }
+                },
+                zhiwei: {
+                    message: '非法职位',
+                    validators: {
+                        notEmpty: {
+                            message: '职位不能为空'
+                        },
+
+
+                    }
+                },
+            }
+
+        });
+
+    });
+</script>
+
+<!--头像上传-->
+<script>
+    //获取上传按钮
+    var input1 = document.getElementById("upload");
+
+    if (typeof FileReader === 'undefined') {
+        //result.innerHTML = "抱歉，你的浏览器不支持 FileReader"; 
+        input1.setAttribute('disabled', 'disabled');
+    } else {
+        input1.addEventListener('change', readFile, false);
+        /*input1.addEventListener('change',function (e){
+        	console.log(this.files);//上传的文件列表
+        },false); */
+    }
+
+    function readFile() {
+        var file = this.files[0]; //获取上传文件列表中第一个文件
+        if (!/image\/\w+/.test(file.type)) {
+            //图片文件的type值为image/png或image/jpg
+            alert("文件必须为图片！");
+            return false;
+        }
+        // console.log(file);
+        var reader = new FileReader(); //实例一个文件对象
+        reader.readAsDataURL(file); //把上传的文件转换成url
+        //当文件读取成功便可以调取上传的接口
+        reader.onload = function(e) {
+            // console.log(this.result);//文件路径
+            // console.log(e.target.result);//文件路径
+            /*var data = e.target.result.split(',');
+            var tp = (file.type == 'image/png')? 'png': 'jpg';
+            var imgUrl = data[1];//图片的url，去掉(data:image/png;base64,)
+            //需要上传到服务器的在这里可以进行ajax请求
+            // console.log(imgUrl);
+            // 创建一个 Image 对象 
+            var image = new Image();
+            // 创建一个 Image 对象 
+            // image.src = imgUrl;
+            image.src = e.target.result;
+            image.onload = function(){
+            	document.body.appendChild(image);
+            }*/
+
+            var image = new Image();
+            // 设置src属性 
+            image.src = e.target.result;
+            var max = 200;
+            // 绑定load事件处理器，加载完成后执行，避免同步问题
+            image.onload = function() {
+                // 获取 canvas DOM 对象 
+                var canvas = document.getElementById("cvs");
+                // 如果高度超标 宽度等比例缩放 *= 
+                /*if(image.height > max) {
+                	image.width *= max / image.height; 
+                	image.height = max;
+                } */
+                // 获取 canvas的 2d 环境对象, 
+                var ctx = canvas.getContext("2d");
+                // canvas清屏 
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                // 重置canvas宽高
+                /*canvas.width = image.width;
+                canvas.height = image.height;
+                if (canvas.width>max) {canvas.width = max;}*/
+                // 将图像绘制到canvas上
+                // ctx.drawImage(image, 0, 0, image.width, image.height);
+                ctx.drawImage(image, 0, 0, 100, 100);
+                // 注意，此时image没有加入到dom之中
+            };
+        }
+    };
+</script>
+
+
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script src="js/bootstrapValidator.min.js"></script>
+
+</html>

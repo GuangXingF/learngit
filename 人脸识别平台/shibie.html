@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="Mosaddek">
+
+
+    <title>识别查询</title>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/table.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.13/css/jquery.dataTables.min.css" />
+
+
+    <link rel="stylesheet" href="css/index.css">
+    <!-- 头部 -->
+    <link rel="stylesheet" href="css/simplify.css">
+    <script src="js/simplify.js"></script>
+
+    <!-- Jquery -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+
+    <!-- 侧栏css-->
+    <link href="css/style.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/dataTables.min.css" />
+
+
+</head>
+<style type="text/css">
+    #main-content {
+        margin-left: 240px;
+    }
+    
+    @media screen and (max-width: 992px) {
+        #main-content {
+            margin-left: 0;
+        }
+    }
+    
+    @media screen and (max-width: 992px) {
+        table.dataTable tbody th,
+        table.dataTable tbody td {
+            padding: 0
+        }
+    }
+    
+    table.dataTable tbody th,
+    table.dataTable tbody td {
+        line-height: 100px;
+    }
+</style>
+
+<body>
+
+    <section id="container">
+        <header class="header white">
+
+
+            <div class="content">
+                <div class="left">
+                    <div class="logo">
+                        <a href="index.html"><img src="img/logo.png"></a>
+                    </div>
+                </div>
+                <div class="right top-nav">
+                    <ul class="nav pull-right top-menu nav-notification">
+                        <li><input type="text" class="form-control search"></li>
+                        <li>
+
+                            <a href="#" class="sj" data-target=".shezhi" data-toggle="modal"><img src="img/sj.png"></a>
+
+                        </li>
+                        <li>
+                            <a href="#" class="xx" data-toggle="dropdown"><img src="img/xx.png"></a>
+                            <span class="badge badge-purple bounceIn animation-delay5 active">1</span>
+                            <ul class="dropdown-menu message pull-right" style="margin-top:4px;">
+                                <li><a>你有1个新的未读消息</a></li>
+                                <li>
+                                    <a class="clearfix" href="#"> <img src="img/t.png" alt="User Avatar">
+                                        <div class="detail"> <strong>李小明</strong>
+                                            <p class="no-margin">修改管理权</p>
+                                            <small class="text-muted"><i class="fa fa-check text-success"></i> 27分钟前</small> </div>
+                                    </a>
+
+                                    <li><a href="#">查看全部消息</a></li>
+                            </ul>
+                            </li>
+                            <Li>
+                                <div class="user-block hidden-xs">
+                                    <a href="#" id="userToggle" data-toggle="dropdown">
+                                        <img src="img/t.png" alt="img-circle inline-block user-profile-pic" width="40px" height="40px">
+                                        <div class="user-detail inline-block">
+                                            <i class="fa fa-angle-down"><img src="img/jiantou.png" width="10px" height="10px"></i>
+                                        </div>
+                                    </a>
+                                    <div class="panel border dropdown-menu user-panel">
+                                        <div class="panel-body paddingTB-sm">
+                                            <ul>
+                                                <li style="border-bottom:1px  #eee">
+                                                    <a href="#"> <i><img src="img/yonhu.png" height="15px" width="15px"  style="margin-top:-5px;"></i><span class="m-left-xs">账户管理</span> </a>
+                                                </li>
+                                                <li>
+                                                    <a href="#"> <i><img src="img/tuichu.png" height="15px" width="15px"style="margin-top:-5px;"></i><span class="m-left-xs">退出登陆</span> </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </Li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!--侧栏end-->
+        <aside>
+            <div id="sidebar" class="nav-collapse ">
+                <!-- sidebar menu start-->
+                <ul class="sidebar-menu">
+                    <li class="sub-menu">
+
+                        <a href="index.html">
+
+                            <i class="gk_img"> </i>
+                            <span>概&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;况</span>
+                        </a>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="so_img"> </i>
+                            <span>信息查询</span>
+
+                        </a>
+
+                    </li>
+                    <li class="sub-menu active" style="    background-color: #fff;">
+
+                        <a href="javascript:;" class="">
+                            <i class="sj_img" style=" background-image:url(img/tj_h.png);"> </i>
+                            <span>数据统计</span>
+
+                        </a>
+                        <ul class="sub">
+                            <li>
+
+
+                                <a class="active" href="renyuan.html" style="   background-color: #fff; color:#424e67 ">人员查询</a>
+                            </li>
+                            <li style="border:none;">
+                                <a class="" href="shibie.html" style="    background-color: #ebebeb;color:#0248B7">识别查询</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="sub-menu">
+                        <a href="javascript:;" class="">
+                            <i class="gl_img"> </i>
+                            <span>用户管理</span>
+
+                        </a>
+                        <ul class="sub">
+                            <li>
+
+                                <a class="active" href="shouquan.html" style=" background-color: #ebebeb;color:#0248B7">访客授权管理</a>
+                            </li>
+
+
+                        </ul>
+                    </li>
+
+
+
+                </ul>
+                <!-- sidebar menu end-->
+            </div>
+        </aside>
+        <!--侧栏end-->
+        <section id="main-content">
+            <section class="wrapper" style="width:100%;padding:40px;">
+
+                <!-- page start-->
+                <div class="row">
+                    <div class="col-lg-12">
+                        <section class="panel">
+                            <header class="panel-heading">
+                                识别查询
+                            </header>
+                            <table class="table table-striped border-top display nowrap" id="sample_1" width="100%" cellspacing="0">
+                                <thead>
+                                    <tr>
+                                        <th>姓名</th>
+                                        <th class="hidden-phone">性别</th>
+                                        <th class="hidden-phone">底照</th>
+                                        <th class="hidden-phone">现场图</th>
+                                        <th class="hidden-phone">摄像头</th>
+                                        <th class="hidden-phone">结果</th>
+                                        <th class="hidden-phone">时间</th>
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="odd gradeX">
+                                        <td>梁艺</td>
+                                        <td class="hidden-phone">男</td>
+                                        <td class="hidden-phone">
+                                            <a data-toggle="modal" data-target=".bs-example-modal-sm">
+                                                <Img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=2699257375,1716518260&fm=117&gp=0.jpg" height="100">
+                                            </a>
+                                        </td>
+                                        <td class="hidden-phone">
+                                            <a data-toggle="modal" data-target=".bs-example-modal-sm">
+                                                <Img src="https://ss0.baidu.com/73x1bjeh1BF3odCf/it/u=246272473,3194384731&fm=85&s=16D51BD6C6623515481E5EAF0300F01D" height="100">
+                                            </a>
+                                        </td>
+                                        <td class="hidden-phone">
+                                            192.168.1.1
+                                        </td>
+                                        <td class="hidden-phone">
+                                            识别成功
+                                        </td>
+                                        <td class="hidden-phone">
+                                            2017-08-28 15:06
+                                        </td>
+                                    </tr>
+                                    <tr class="odd gradeX">
+                                        <td>陈朋</td>
+                                        <td class="hidden-phone">男</td>
+                                        <td class="hidden-phone">
+                                            <a data-toggle="modal" data-target=".bs-example-modal-sm">
+                                                <Img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=243803575,1996555614&fm=117&gp=0.jpg" height="100">
+                                            </a>
+                                        </td>
+                                        <td class="hidden-phone">
+                                            <a data-toggle="modal" data-target=".bs-example-modal-sm">
+                                                <Img src="https://ss0.baidu.com/73x1bjeh1BF3odCf/it/u=246272473,3194384731&fm=85&s=16D51BD6C6623515481E5EAF0300F01D" height="100">
+                                            </a>
+                                        </td>
+                                        <td class="hidden-phone">
+                                            192.168.1.1
+                                        </td>
+                                        <td class="hidden-phone">
+                                            识别成功
+                                        </td>
+                                        <td class="hidden-phone">
+                                            2017-08-28 18:06
+                                        </td>
+                                    </tr>
+                                    <tr class="odd gradeX">
+                                        <td>张亚男</td>
+                                        <td class="hidden-phone">女</td>
+                                        <td class="hidden-phone">
+                                            <a data-toggle="modal" data-target=".bs-example-modal-sm">
+                                                <Img src="https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1248758867,1325487746&fm=117&gp=0.jpg" height="100">
+
+                                            </a>
+                                        </td>
+                                        <td class="hidden-phone">
+                                            <a data-toggle="modal" data-target=".bs-example-modal-sm">
+                                                <Img src="https://ss0.baidu.com/73x1bjeh1BF3odCf/it/u=246272473,3194384731&fm=85&s=16D51BD6C6623515481E5EAF0300F01D" height="100">
+                                            </a>
+                                        </td>
+                                        <td class="hidden-phone">
+                                            192.168.1.1
+                                        </td>
+                                        <td class="hidden-phone">
+                                            <span style="color:red">识别失败</span>
+                                        </td>
+                                        <td class="hidden-phone">
+                                            2017-08-29 15:06
+                                        </td>
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
+                        </section>
+                    </div>
+                </div>
+                <!-- page end-->
+            </section>
+
+        </section>
+
+    </section>
+
+    <!-- 删除弹出框 -->
+    <div id="del" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="gridSystemModalLabel">您确定要删除该人员？</h4>
+                </div>
+                <div class="modal-body">
+                    <p>
+                        Jhone doe
+                    </p>
+
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" class="btn btn-primary" style="background: #0248B7;">删除</button>
+                </div>
+
+            </div>
+
+        </div>
+        <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+    </div>
+
+    <!-- 添加弹出框 -->
+
+    <div id="gridSystemModal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel">
+        <div class="modal-dialog" role="document ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true ">&times;</span></button>
+                    <h4 class="modal-title" id="gridModalLabel">添加人员</h4>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+
+                        <div class="form-group">
+
+                            <label for="username" style=" margin-top: 50px;">头像：</label>
+                            <div class="con4">
+
+                                <canvas id="cvs" width="80" height="80"></canvas>
+                                <span class="btn upload ">
+                                    <input type="file" class="upload_pic" id="upload" />
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="username ">姓名：</label>
+                            <input type="text" class="form-control" placeholder="请输入姓名" name="username" id="username" required></input>
+                        </div>
+                        <div class="form-group">
+                            <label for="profession">选择性别：</label>
+                            <select id="profession" class="form-control"> 
+                                 <option>男</option> 
+                                 <option>女</option> 
+                                 <option>其他</option> 
+                                 <option>外星人</option> 
+                                </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="tel">部门：</label>
+                            <input type="text " class="form-control" placeholder="请输入您的部门" name="bumen" id="bumen" required> </input>
+                        </div>
+                        <div class="form-group">
+                            <label for="tel">职位：</label>
+                            <input type="text " class="form-control" placeholder="请输入您的职位" name="zhiwei" id="zhiwei" required> </input>
+                        </div>
+                        <div class="form-group">
+                            <label for="tel">手机号码：</label>
+                            <input type="text" class="form-control" id="phone" placeholder="请输入您的电话号码" name="phone" maxlength="13" required> </input>
+                        </div>
+                        <div class="form-group">
+                            <label>身份证号：</label>
+                            <input type="text" class="form-control" name="card" id="card" placeholder="请输入您的身份证号" maxlength="18" required/>
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-lg btn-block" type="submit" style="background-color: #0248B7;color:#fff;font-size:14px;">确认添加</button>
+
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- 编辑弹出框 -->
+    <div id="bianji" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="gridModalLabel">
+        <div class="modal-dialog" role="document ">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="gridModalLabel">编辑人员</h4>
+                </div>
+                <div class="modal-body">
+
+                    <form>
+
+                        <div class="form-group">
+
+                            <label for="username" style=" margin-top: 50px;">头像：</label>
+                            <div class="con4">
+
+                                <canvas id="cvss" width="80" height="80" style="background:url(img/t.png);background-repeat:no-repeat;background-size:100%" class=cvss ""></canvas>
+                                <span class="btn upload">
+                                    <input type="file" class="upload_pic" id="upload_l" />
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="username">姓名：</label>
+                            <input type="text" class="form-control username" placeholder="请输入姓名" name="username" id="username" required></input>
+                        </div>
+                        <div class="form-group">
+                            <label for="profession">选择性别：</label>
+                            <select id="profession" class="form-control profession"> 
+                                 <option value="1">男</option> 
+                                 <option value="2">女</option> 
+                                 <option value="3">其他</option> 
+                                 <option>外星人</option> 
+                                </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="tel">部门：</label>
+                            <input type="text " class="form-control" placeholder="请输入您的部门" name="bumen" id="bumen" required> </input>
+                        </div>
+                        <div class="form-group">
+                            <label for="tel">职位：</label>
+                            <input type="text " class="form-control" placeholder="请输入您的职位" name="zhiwei" id="zhiwei" required> </input>
+                        </div>
+                        <div class="form-group">
+                            <label for="tel">手机号码：</label>
+                            <input type="text" class="form-control" id="phone" placeholder="请输入您的电话号码" name="phone" maxlength="13" required> </input>
+                        </div>
+                        <div class="form-group">
+                            <label>身份证号：</label>
+                            <input type="text" class="form-control" name="card" id="card" placeholder="请输入您的身份证号" maxlength="18" required/>
+                        </div>
+
+                        <div class="form-group">
+                            <button class="btn btn-lg btn-primary btn-block" type="submit" style="background-color: #0248B7;color:#fff;font-size:14px;" onclick="update()">确认修改</button>
+
+                        </div>
+
+                    </form>
+                </div>
+
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- 图片查看 -->
+    <div class="modal fade bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel">
+        <div class="modal-dialog modal-sm" role="document">
+            <div class="modal-content" style="background-color: rgba(0,0,0,0);">
+                <img src="" style="width:100%">
+            </div>
+        </div>
+    </div>
+    <!-- 设置弹出框 -->
+    <div class="modal fade shezhi" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <iframe src="shezhi.html" style="border:none;width:100%;height:550px"></iframe>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+
+
+<!--头像上传-->
+<script>
+    //获取上传按钮
+    var input1 = document.getElementById("upload");
+
+    if (typeof FileReader === 'undefined') {
+        //result.innerHTML = "抱歉，你的浏览器不支持 FileReader"; 
+        input1.setAttribute('disabled', 'disabled');
+    } else {
+        input1.addEventListener('change', readFile, false);
+        /*input1.addEventListener('change',function (e){
+        	console.log(this.files);//上传的文件列表
+        },false); */
+    }
+
+    function readFile() {
+        var file = this.files[0]; //获取上传文件列表中第一个文件
+        if (!/image\/\w+/.test(file.type)) {
+            //图片文件的type值为image/png或image/jpg
+            alert("文件必须为图片！");
+            return false;
+        }
+        // console.log(file);
+        var reader = new FileReader(); //实例一个文件对象
+        reader.readAsDataURL(file); //把上传的文件转换成url
+        //当文件读取成功便可以调取上传的接口
+        reader.onload = function(e) {
+            // console.log(this.result);//文件路径
+            // console.log(e.target.result);//文件路径
+            /*var data = e.target.result.split(',');
+            var tp = (file.type == 'image/png')? 'png': 'jpg';
+            var imgUrl = data[1];//图片的url，去掉(data:image/png;base64,)
+            //需要上传到服务器的在这里可以进行ajax请求
+            // console.log(imgUrl);
+            // 创建一个 Image 对象 
+            var image = new Image();
+            // 创建一个 Image 对象 
+            // image.src = imgUrl;
+            image.src = e.target.result;
+            image.onload = function(){
+            	document.body.appendChild(image);
+            }*/
+
+            var image = new Image();
+            // 设置src属性 
+            image.src = e.target.result;
+            var max = 200;
+            // 绑定load事件处理器，加载完成后执行，避免同步问题
+            image.onload = function() {
+                // 获取 canvas DOM 对象 
+                var canvas = document.getElementById("cvs");
+                // 如果高度超标 宽度等比例缩放 *= 
+                /*if(image.height > max) {
+                	image.width *= max / image.height; 
+                	image.height = max;
+                } */
+                // 获取 canvas的 2d 环境对象, 
+                var ctx = canvas.getContext("2d");
+                // canvas清屏 
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                // 重置canvas宽高
+                /*canvas.width = image.width;
+                canvas.height = image.height;
+                if (canvas.width>max) {canvas.width = max;}*/
+                // 将图像绘制到canvas上
+                // ctx.drawImage(image, 0, 0, image.width, image.height);
+                ctx.drawImage(image, 0, 0, 80, 80);
+                // 注意，此时image没有加入到dom之中
+            };
+        }
+    };
+</script>
+<!--弹出框头像上传-->
+<script>
+    //获取上传按钮
+    var input1 = document.getElementById("upload_l");
+
+    if (typeof FileReader === 'undefined') {
+        //result.innerHTML = "抱歉，你的浏览器不支持 FileReader"; 
+        input1.setAttribute('disabled', 'disabled');
+    } else {
+        input1.addEventListener('change', readFile, false);
+        /*input1.addEventListener('change',function (e){
+        	console.log(this.files);//上传的文件列表
+        },false); */
+    }
+
+    function readFile() {
+        var file = this.files[0]; //获取上传文件列表中第一个文件
+        if (!/image\/\w+/.test(file.type)) {
+            //图片文件的type值为image/png或image/jpg
+            alert("文件必须为图片！");
+            return false;
+        }
+        // console.log(file);
+        var reader = new FileReader(); //实例一个文件对象
+        reader.readAsDataURL(file); //把上传的文件转换成url
+        //当文件读取成功便可以调取上传的接口
+        reader.onload = function(e) {
+            // console.log(this.result);//文件路径
+            // console.log(e.target.result);//文件路径
+            /*var data = e.target.result.split(',');
+            var tp = (file.type == 'image/png')? 'png': 'jpg';
+            var imgUrl = data[1];//图片的url，去掉(data:image/png;base64,)
+            //需要上传到服务器的在这里可以进行ajax请求
+            // console.log(imgUrl);
+            // 创建一个 Image 对象 
+            var image = new Image();
+            // 创建一个 Image 对象 
+            // image.src = imgUrl;
+            image.src = e.target.result;
+            image.onload = function(){
+            	document.body.appendChild(image);
+            }*/
+
+            var image = new Image();
+            // 设置src属性 
+            image.src = e.target.result;
+            var max = 200;
+            // 绑定load事件处理器，加载完成后执行，避免同步问题
+            image.onload = function() {
+                // 获取 canvas DOM 对象 
+                var canvas = document.getElementById("cvss");
+                // 如果高度超标 宽度等比例缩放 *= 
+                /*if(image.height > max) {
+                	image.width *= max / image.height; 
+                	image.height = max;
+                } */
+                // 获取 canvas的 2d 环境对象, 
+                var ctx = canvas.getContext("2d");
+                // canvas清屏 
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                // 重置canvas宽高
+                /*canvas.width = image.width;
+                canvas.height = image.height;
+                if (canvas.width>max) {canvas.width = max;}*/
+                // 将图像绘制到canvas上
+                // ctx.drawImage(image, 0, 0, image.width, image.height);
+                ctx.drawImage(image, 0, 0, 80, 80);
+                // 注意，此时image没有加入到dom之中
+            };
+        }
+    };
+</script>
+<!-- 验证表单-->
+<script>
+    $(function() {
+        $('form').bootstrapValidator({
+            message: 'This value is not valid',
+            feedbackIcons: {
+                valid: 'glyphicon glyphicon-ok',
+                invalid: 'glyphicon glyphicon-remove',
+                validating: 'glyphicon glyphicon-refresh'
+            },
+            fields: {
+                username: {
+                    message: '用户名验证失败',
+                    validators: {
+                        notEmpty: {
+                            message: '用户名不能为空'
+                        },
+                        stringLength: {
+                            min: 2,
+                            max: 5,
+                            message: '用户名长度必须2位以上'
+                        },
+
+
+                    }
+                },
+                phone: {
+                    message: '电话号码无效',
+                    validators: {
+                        notEmpty: {
+                            message: '手机号码不能为空'
+                        },
+                        stringLength: {
+                            min: 11,
+                            max: 11,
+                            message: '请输入11位手机号码'
+                        },
+                        regexp: {
+                            regexp: /^1[3|5|8]{1}[0-9]{9}$/,
+                            message: '请输入正确的手机号码'
+                        }
+                    }
+                },
+                card: {
+                    message: '身份证号码无效',
+                    validators: {
+                        notEmpty: {
+                            message: '身份证号码不能为空'
+                        },
+                        stringLength: {
+                            min: 18,
+                            max: 18,
+                            message: '请输入18位身份证号码'
+                        },
+
+                    }
+                },
+                bumen: {
+                    message: '非法部门',
+                    validators: {
+                        notEmpty: {
+                            message: '部门不能为空'
+                        },
+
+
+                    }
+                },
+                zhiwei: {
+                    message: '非法职位',
+                    validators: {
+                        notEmpty: {
+                            message: '职位不能为空'
+                        },
+
+
+                    }
+                },
+            }
+
+        });
+
+    });
+</script>
+
+<!-- data Tables -->
+<script src="js/data-tables/jquery.js"></script>
+<script type="text/javascript" src="js/data-tables/jquery.dataTables.js"></script>
+<script src="js/data-tables/dataTables.buttons.min.js"></script>
+<script src="js/data-tables/jszip.min.js"></script>
+<script src="js/data-tables/buttons.html5.min.js"></script>
+<script src="js/data-tables/dataTables.bootstrap.js"></script>
+
+<script>
+    $()
+</script>
+
+
+
+
+<!--侧栏js-->
+<script src="js/common-scripts.js"></script>
+
+<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script type="text/javascript">
+    $('#del').on('show.bs.modal', function(event) {
+        var button = $(event.relatedTarget) // 触发事件的按钮  
+        var recipient = button.data('whatever') // 解析出data-whatever内容  
+        var modal = $(this)
+
+        modal.find('.modal-body p').text('Jhone doe' + recipient)
+    })
+</script>
+
+<script>
+    $('#bianji').on('show.bs.modal', function(event) {
+        var button = $(event.relatedTarget) // 触发事件的按钮  
+        var recipient = button.data('whatever') // 解析出data-whatever内容  
+        var modal = $(this)
+        modal.find('.modal-body .username').val(recipient)
+        modal.find('.modal-body .profession').val(2)
+        modal.find('.modal-body .cvss').attr("style", "background: url(img/le_tx.png);background-repeat:no-repeat;background-size:100%")
+    })
+</script>
+<!--查看头像-->
+<script>
+    $('#pic').on('show.bs.modal', function(event) {
+        var button = $(event.relatedTarget) // 触发事件的按钮  
+        var recipient = button.data('whatever') // 解析出data-whatever内容  
+        var modal = $(this)
+        modal.find('.modal-content img').attr("src", "https://ss0.baidu.com/73x1bjeh1BF3odCf/it/u=246272473,3194384731&fm=85&s=16D51BD6C6623515481E5EAF0300F01D")
+
+    })
+</script>
+<script>
+    $('#myStateButton').on('click', function() {
+        $(this).button('complete') // button text will be "finished!"
+    })
+</script>
+<script src="js/bootstrapValidator.min.js"></script>
+
+</html>

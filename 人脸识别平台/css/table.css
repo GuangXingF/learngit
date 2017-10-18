@@ -1,0 +1,134 @@
+.wrap {
+    position: relative;
+    overflow: hidden;
+    padding-top: 54px;
+    min-height: 100%;
+    padding-bottom: 45px;
+    display: inline-block;
+    margin-top: 60px;
+    padding: 40px 40px 40px 40px;
+}
+
+.table-responsive {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 50px;
+    text-align: center;
+}
+
+.dataTables_length,
+.dataTables_filter {
+    padding: 15px;
+}
+
+.dataTables_length label,
+.dataTables_filter label {
+    font-weight: 300;
+}
+
+.dataTables_length select {
+    width: 65px;
+    padding: 5px 8px;
+}
+
+.dataTables_length label,
+.dataTables_filter label {
+    font-weight: 300;
+}
+
+.dataTables_filter {
+    float: right;
+}
+
+.dataTables_length,
+.dataTables_filter {
+    padding: 15px;
+}
+
+.dataTables_length label,
+.dataTables_filter label {
+    font-weight: 300;
+}
+
+.dataTables_filter label {
+    width: 100%;
+}
+
+.dataTables_filter label input {
+    width: 78%;
+    height: 50%;
+}
+
+.dataTables_info {
+    padding: 0 15px;
+}
+
+.dataTables_paginate.paging_bootstrap.pagination {
+    float: right;
+    margin-right: 15px;
+    margin-top: -5px;
+    margin-bottom: 15px;
+}
+
+.dataTables_paginate.paging_bootstrap.pagination li {
+    float: left;
+    margin: 0 1px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+.dataTables_paginate.paging_bootstrap.pagination li a {
+    color: #797979;
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+.dataTables_paginate.paging_bootstrap.pagination li.disabled a {
+    color: #c7c7c7;
+}
+
+.dataTables_paginate.paging_bootstrap.pagination li {
+    float: left;
+    margin: 0 1px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+.dataTables_paginate.paging_bootstrap.pagination li:hover a,
+.dataTables_paginate.paging_bootstrap.pagination li.active a {
+    color: #797979;
+    background: #eee;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+}
+
+.dataTables_paginate.paging_bootstrap.pagination li a {
+    color: #797979;
+    padding: 5px 10px;
+    display: inline-block;
+}
+
+.label-success {
+    background-color: #5cb85c;
+    height: 20px;
+    width: 40px;
+    display: block;
+    line-height: 16px;
+    float: left;
+    margin-left: 20px;
+}
+
+.table>tbody>tr>td,
+.table>tbody>tr>th,
+.table>tfoot>tr>td,
+.table>tfoot>tr>th,
+.table>thead>tr>td,
+.table>thead>tr>th {
+    padding: 8px;
+    line-height: 2.52857143;
+    vertical-align: top;
+    border-top: 1px solid #ddd;
+    text-align: center;
+}
